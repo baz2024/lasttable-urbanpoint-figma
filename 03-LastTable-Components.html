@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LastTable component library</title>
+</head>
+<body>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#ffffff}
+a{color:#0E7F84}a:hover{color:#0B7378}
+.spec{display:flex;flex-direction:column;gap:14px;padding:20px;border:1px solid #EEEEEE;border-radius:16px;background:#fff}
+.spec h3{margin:0;font-size:14px;font-weight:800;color:#1C1C1C}
+.spec .d{font-size:11px;color:#666666;line-height:1.5}
+.lbl{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#9A9A9A}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 20px;border-radius:12px;font:700 15px/20px 'Plus Jakarta Sans',system-ui,sans-serif;border:0;cursor:pointer;box-sizing:border-box}
+.btn-p{background:#E3111B;color:#fff}.btn-p.pressed{background:#C90E17}.btn-p.dis{background:#F5F5F5;color:#9A9A9A}
+.btn-s{background:#fff;color:#E3111B;border:1.5px solid #E3111B}.btn-s.pressed{background:#FDE8E9}.btn-s.dis{border-color:#E6E6E6;color:#9A9A9A}
+.btn-t{background:#0E7F84;color:#fff}
+.btn-sm{height:36px;padding:0 14px;font-size:13px;border-radius:999px}
+.ico{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;border:0;background:#F5F5F5;color:#1C1C1C;cursor:pointer}
+.ico.teal{color:#0E7F84}.ico.white{background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.12)}.ico.red{background:#E3111B;color:#fff}.ico.sm{width:36px;height:36px}
+.focus{outline:2px solid #0E7F84;outline-offset:2px}
+.search{display:flex;align-items:center;gap:10px;height:48px;padding:0 16px;border-radius:12px;background:#F5F5F5;color:#666666;font:500 14px 'Plus Jakarta Sans',system-ui,sans-serif;box-sizing:border-box}
+.search input{border:0;background:transparent;font:inherit;color:#1C1C1C;flex:1;min-width:0;outline:none}
+.search.focus{background:#fff;border:1.5px solid #0E7F84;outline:0}
+.chip{display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 16px;border-radius:999px;background:#F5F5F5;color:#1C1C1C;font:600 14px 'Plus Jakarta Sans',system-ui,sans-serif;border:0;cursor:pointer;white-space:nowrap}
+.chip.sel{background:#0E7F84;color:#fff}.chip.pressed{background:#E6E6E6}.chip.dis{color:#9A9A9A}
+.tile{position:relative;overflow:hidden;border-radius:16px;background:#F5F5F5;padding:16px;box-sizing:border-box;display:flex;flex-direction:column;text-decoration:none;color:#1C1C1C;font:700 16px/22px 'Plus Jakarta Sans',system-ui,sans-serif}
+.tile .obj{position:absolute;right:8px;bottom:6px;width:76px;height:76px;border-radius:50%}
+.tile.sel{outline:2px solid #E3111B;outline-offset:-2px}
+.ph{background:#E9E4DD;color:#7A6F62;display:flex;align-items:center;justify-content:center;text-align:center;font:600 10px/1.3 'Plus Jakarta Sans',system-ui,sans-serif;overflow:hidden}
+.cuis{display:flex;flex-direction:column;align-items:center;gap:8px;width:84px;text-decoration:none;color:#1C1C1C;font:600 14px/18px 'Plus Jakarta Sans',system-ui,sans-serif;text-align:center}
+.cuis .ph{width:76px;height:76px;border-radius:50%}
+.cuis.sel .ph{box-shadow:0 0 0 3px #fff,0 0 0 5px #E3111B}
+.logo{width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:800 18px 'Plus Jakarta Sans',system-ui,sans-serif;color:#fff;flex:none;letter-spacing:-.02em}
+.logo.ring{background:#fff;color:#1C1C1C;border:1px solid #E6E6E6}
+.rrow{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid #EEEEEE;text-decoration:none;color:#1C1C1C;font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+.rrow .t{font-size:16px;font-weight:700;line-height:22px}
+.rrow .s{font-size:13px;color:#666666;line-height:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.meta{display:flex;align-items:center;gap:6px;font:500 13px/18px 'Plus Jakarta Sans',system-ui,sans-serif;color:#666666;flex-wrap:wrap}
+.meta .dot{width:3px;height:3px;border-radius:50%;background:#C8C8C8}
+.meta svg{flex:none}
+.link-r{color:#E3111B;font-weight:700;text-decoration:underline;text-underline-offset:3px;font-size:14px;display:inline-flex;align-items:center;gap:6px}
+.ocard{position:relative;overflow:hidden;display:flex;gap:14px;padding:16px;border-radius:20px;border:1px solid #E6E6E6;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.06);font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1C1C1C;text-decoration:none;box-sizing:border-box}
+.ocard .notch{position:absolute;right:-11px;width:22px;height:22px;border-radius:50%;background:#fff;border:1px solid #E6E6E6}
+.rcard{display:flex;flex-direction:column;border-radius:20px;border:1px solid #E6E6E6;background:#fff;overflow:hidden;text-decoration:none;color:#1C1C1C;font-family:'Plus Jakarta Sans',system-ui,sans-serif;box-sizing:border-box}
+.sect{display:flex;justify-content:space-between;align-items:center;font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+.sect h2{margin:0;font-size:18px;font-weight:700;line-height:24px;color:#1C1C1C}
+.sect a{display:inline-flex;align-items:center;gap:8px;color:#E3111B;font:700 14px 'Plus Jakarta Sans',system-ui,sans-serif;text-decoration:none}
+.nav{display:flex;justify-content:space-around;align-items:flex-start;padding:10px 8px 0;border-top:1px solid #EEEEEE;background:#fff;font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+.nav a{display:flex;flex-direction:column;align-items:center;gap:4px;width:64px;text-decoration:none;color:#1C1C1C;font:600 12px/14px 'Plus Jakarta Sans',system-ui,sans-serif;padding:4px 0}
+.nav a.on{color:#E3111B}
+.prow{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid #EEEEEE;text-decoration:none;color:#1C1C1C;font:600 15px/20px 'Plus Jakarta Sans',system-ui,sans-serif}
+.prow .pi{width:40px;height:40px;border-radius:12px;background:#E3F6F4;color:#0E7F84;display:flex;align-items:center;justify-content:center;flex:none}
+.stars{display:inline-flex;gap:2px;color:#F2B01E}
+.pill{display:inline-flex;align-items:center;height:28px;padding:0 12px;border-radius:999px;font:700 12px 'Plus Jakarta Sans',system-ui,sans-serif}
+.pill.red{background:#FDE8E9;color:#C90E17}.pill.teal{background:#E3F6F4;color:#0B7378}
+</style>
+
+<div style="width: 1280px; height: 1880px; box-sizing: border-box; padding: 48px 56px; display: flex; flex-direction: column; gap: 24px; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #1C1C1C">
+  <div style="display: flex; flex-direction: column; gap: 6px">
+    <div style="font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #E3111B">03 · LastTable</div>
+    <h1 style="margin: 0; font-size: 30px; font-weight: 800; letter-spacing: -.01em">Component library</h1>
+    <p style="margin: 0; font-size: 14px; color: #666666; line-height: 1.5; max-width: 820px">Specimens with their visual states. Properties: label text, image slot, icon swap, optional trailing element. Only families used by the four restyled screens are included.</p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+    <div class="spec">
+      <h3>Buttons</h3>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div class="lbl">Primary · default / pressed / disabled</div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap"><button class="btn btn-p">Book this table</button><button class="btn btn-p pressed">Book this table</button><button class="btn btn-p dis">Book this table</button></div>
+        <div class="lbl">Secondary (outline) · default / pressed / focused</div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap"><button class="btn btn-s">See all offers</button><button class="btn btn-s pressed">See all offers</button><button class="btn btn-s focus">See all offers</button></div>
+        <div class="lbl">Small pill · primary / teal</div>
+        <div style="display: flex; gap: 10px"><button class="btn btn-p btn-sm">View all offers</button><button class="btn btn-t btn-sm">Apply</button></div>
+      </div>
+      <div class="d">48 px tall, 12 px radius, 15/700 label. Pills are 36 px, fully round. Disabled uses grey/100 fill with grey/400 text.</div>
+    </div>
+
+    <div class="spec">
+      <h3>Icon buttons &amp; floating controls</h3>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div class="lbl">Grey circle (back, share) · teal utility · focused</div>
+        <div style="display: flex; gap: 10px">
+          <button class="ico" aria-label="Back"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m7-7-7 7 7 7"/></svg></button>
+          <button class="ico teal" aria-label="Save"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></button>
+          <button class="ico teal" aria-label="Saved"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></button>
+          <button class="ico focus" aria-label="Share"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M12 15V3m-4 4 4-4 4 4"/></svg></button>
+        </div>
+        <div class="lbl">Floating over photography · white with shadow / red arrow</div>
+        <div style="display: flex; gap: 10px; padding: 12px; border-radius: 12px; background: #E9E4DD">
+          <button class="ico white" aria-label="Back"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m7-7-7 7 7 7"/></svg></button>
+          <button class="ico white teal" aria-label="Save"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></button>
+          <button class="ico red sm" aria-label="View all"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></button>
+        </div>
+      </div>
+      <div class="d">44 px circles; icon swap via property. Red 36 px arrow pairs with the "View all" section link.</div>
+    </div>
+
+    <div class="spec">
+      <h3>Search field</h3>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div class="lbl">Default</div>
+        <label class="search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.3-4.3"/></svg><input type="search" placeholder="Restaurant, cuisine or area" aria-label="Search"></label>
+        <div class="lbl">Focused</div>
+        <label class="search focus"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E7F84" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.3-4.3"/></svg><input type="search" value="Ramen" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#666666" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></label>
+        <div class="lbl">With location trailing</div>
+        <label class="search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.3-4.3"/></svg><input type="search" placeholder="Search LastTable" aria-label="Search"><span style="display: inline-flex; align-items: center; gap: 4px; color: #0E7F84; font-weight: 600; font-size: 13px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>Dublin 2</span></label>
+      </div>
+      <div class="d">48 px, grey/100 fill, 12 px radius; focus turns white with 1.5 px teal border.</div>
+    </div>
+
+    <div class="spec">
+      <h3>Filter &amp; category chips</h3>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div class="lbl">Unselected · with icon + chevron · selected (teal) · pressed · disabled</div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap">
+          <button class="chip">New</button>
+          <button class="chip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>Nearby<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <button class="chip sel"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.8 5.6L19 9l-4.6 3.4L16 18l-4-3-4 3 1.6-5.6L5 9l5.2-1.4Z"/></svg>Popular<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+          <button class="chip pressed">Tonight</button>
+          <button class="chip dis">Open now</button>
+        </div>
+      </div>
+      <div class="d">40 px, full radius, 14/600. Selected = teal/600 fill, white text, trailing clear icon.</div>
+    </div>
+
+    <div class="spec" style="grid-column: span 2">
+      <h3>Category tiles &amp; cuisine circles</h3>
+      <div style="display: grid; grid-template-columns: 165px 165px 1fr; gap: 16px; align-items: start">
+        <a class="tile" href="#tiles" style="height: 115px">Deals<br>tonight<div class="ph obj">[PHOTO: plated dish cut-out]</div></a>
+        <a class="tile sel" href="#tiles" style="height: 115px">Walk-in<br>tables<div class="ph obj">[PHOTO: cut-out]</div></a>
+        <div style="display: flex; gap: 12px; overflow: hidden">
+          <a class="cuis" href="#c"><div class="ph">[PHOTO: pizza]</div>Pizza &amp; Pasta</a>
+          <a class="cuis sel" href="#c"><div class="ph">[PHOTO: ramen]</div>Asian</a>
+          <a class="cuis" href="#c"><div class="ph">[PHOTO: steak]</div>Steak</a>
+          <a class="cuis" href="#c"><div class="ph">[PHOTO: brunch]</div>Brunch</a>
+        </div>
+      </div>
+      <div class="d">Tiles: grey/100, 16 px radius, 16/700 label top-left, 76 px isolated object bottom-right (image slot property). Selected tile gets a 2 px inset red outline. Cuisine items: 76 px circular photo, 84 px column, 2-line label; selected = red ring.</div>
+    </div>
+
+    <div class="spec">
+      <h3>Section header · metadata · rating</h3>
+      <div style="display: flex; flex-direction: column; gap: 14px">
+        <div class="sect"><h2>Tonight's tables</h2><a href="#all">View all<span class="ico red sm" style="width: 32px; height: 32px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></span></a></div>
+        <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 22s-7-6-7-12a7 7 0 0 1 14 0c0 6-7 12-7 12Zm0-9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg>1.2 km<span class="dot"></span><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg>4.6 (813)<span class="dot"></span>€€<span class="dot"></span><span style="color: #0E7F84; font-weight: 600">Open now</span></div>
+        <div style="display: flex; align-items: center; gap: 8px"><span class="stars" aria-label="4.5 out of 5"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6E6E6" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg></span><span style="font-size: 14px; font-weight: 700">4.5</span><span style="font-size: 13px; color: #666666">813 reviews</span></div>
+        <div style="display: flex; gap: 8px"><span class="pill red">−30% tonight</span><span class="pill teal">Walk-in</span></div>
+        <a class="link-r" href="#offers">3 tables available<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+      </div>
+      <div class="d">Meta row: 13/500 grey with 14 px filled glyphs and 3 px dot separators. Red underlined expander mirrors the reference's "Offers available".</div>
+    </div>
+
+    <div class="spec" style="grid-column: span 2">
+      <h3>Restaurant list row</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px">
+        <div style="display: flex; flex-direction: column">
+          <a class="rrow" href="#r1">
+            <div class="logo" style="background: #1B6B4A">ON</div>
+            <div style="display: flex; flex-direction: column; gap: 4px; min-width: 0; flex: 1">
+              <div style="display: flex; justify-content: space-between; gap: 8px"><div class="t">Osteria Nove — Dame Lane</div><span class="ico teal" style="width: 28px; height: 28px; background: transparent"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></span></div>
+              <div class="s">12 Dame Lane, Dublin 2 · Italian</div>
+              <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 22s-7-6-7-12a7 7 0 0 1 14 0c0 6-7 12-7 12Zm0-9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg>0.8 km<span class="dot"></span><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg>4.6 (813)<span class="dot"></span>€€</div>
+              <a class="link-r" href="#offers">3 tables tonight<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+            </div>
+          </a>
+          <div class="lbl" style="padding-top: 8px">Default · teal outlined heart</div>
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <a class="rrow" href="#r2" style="background: #FAFAFA; margin: 0 -8px; padding-left: 8px; padding-right: 8px; border-radius: 12px; border-bottom: 0">
+            <div class="logo ring">KR</div>
+            <div style="display: flex; flex-direction: column; gap: 4px; min-width: 0; flex: 1">
+              <div style="display: flex; justify-content: space-between; gap: 8px"><div class="t">Kōyō Ramen — Capel St</div><span class="ico teal" style="width: 28px; height: 28px; background: transparent"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></span></div>
+              <div class="s">41 Capel Street, Dublin 1 · Japanese</div>
+              <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 22s-7-6-7-12a7 7 0 0 1 14 0c0 6-7 12-7 12Zm0-9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg>1.4 km<span class="dot"></span><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg>4.8 (402)<span class="dot"></span>€</div>
+              <span style="font-size: 14px; font-weight: 600; color: #9A9A9A">Fully booked tonight</span>
+            </div>
+          </a>
+          <div class="lbl" style="padding-top: 8px">Pressed · saved heart · no availability</div>
+        </div>
+      </div>
+      <div class="d">80 px logo (brand fill or white ring), 16 px gap, title 16/700 wraps to two lines, address 13 grey truncated, meta row, red offers expander. Hairline #EEEEEE separator; pressed = grey/50 wash.</div>
+    </div>
+
+    <div class="spec">
+      <h3>Offer card (ticket edge)</h3>
+      <a class="ocard" href="#o1">
+        <div class="notch" style="top: 34px"></div><div class="notch" style="bottom: 34px"></div>
+        <div class="logo" style="width: 72px; height: 72px; background: #B8382B; font-size: 16px">SY</div>
+        <div style="display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; padding-right: 36px">
+          <div style="font-size: 13px; color: #666666; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">The Salt Yard — Smithfield</div>
+          <div style="font-size: 16px; font-weight: 700; line-height: 22px">30% off food for 2, tonight 9:15 pm</div>
+          <div style="font-size: 12px; font-weight: 600; letter-spacing: .02em; padding-top: 4px">SAVE <span style="color: #E3111B">€24</span></div>
+        </div>
+        <span class="ico teal" style="position: absolute; right: 14px; top: 12px; width: 32px; height: 32px; background: transparent"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></span>
+        <span class="ico teal" style="position: absolute; right: 14px; bottom: 12px; width: 32px; height: 32px; background: transparent"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 4v16M4 8h16"/><rect x="11" y="11" width="5" height="5"/></svg></span>
+      </a>
+      <div class="d">20 px radius, 1 px border, soft shadow, two 22 px notches on the right edge between heart and utility icon (property: trailing icon). 72 px logo.</div>
+    </div>
+
+    <div class="spec">
+      <h3>Restaurant / promo card</h3>
+      <a class="rcard" href="#rc">
+        <div class="ph" style="height: 120px">[PHOTO: dining room]</div>
+        <div style="display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 16px">
+          <div style="display: flex; justify-content: space-between; align-items: center"><div style="font-size: 16px; font-weight: 700">Marrow &amp; Co</div><span class="pill red">−25%</span></div>
+          <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg>4.7<span class="dot"></span>Modern Irish<span class="dot"></span>2.1 km</div>
+        </div>
+      </a>
+      <div class="d">Photo top (16:9 slot), 20 px radius, border, title + red pill, meta row.</div>
+    </div>
+
+    <div class="spec">
+      <h3>Profile / settings row</h3>
+      <div style="display: flex; flex-direction: column">
+        <a class="prow" href="#p1"><span class="pi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg></span><span style="flex: 1">Personal details</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+        <a class="prow" href="#p2"><span class="pi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 8 3 8H3s3-1 3-8M10 21h4"/></svg></span><span style="flex: 1">Notifications</span><span style="width: 44px; height: 26px; border-radius: 999px; background: #0E7F84; position: relative"><span style="position: absolute; right: 3px; top: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff"></span></span></a>
+        <a class="prow" href="#p3" style="border-bottom: 0"><span class="pi" style="background: #FDE8E9; color: #C90E17"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4m7 14 5-5-5-5m5 5H9"/></svg></span><span style="flex: 1; color: #C90E17">Log out</span></a>
+      </div>
+      <div class="d">40 px tinted icon square (12 px radius), 15/600 label, chevron or toggle trailing. Destructive rows use red tint.</div>
+    </div>
+
+    <div class="spec" style="grid-column: span 3">
+      <h3>Bottom navigation</h3>
+      <div style="display: grid; grid-template-columns: 390px 1fr; gap: 24px; align-items: start">
+        <nav class="nav" style="border: 1px solid #EEEEEE; border-radius: 12px; padding-bottom: 14px" aria-label="Main">
+          <a class="on" href="#explore" aria-current="page"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h14M5 10v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7M5 10l1.5-5h11L19 10"/><path d="M9 19v-5h6v5"/></svg>Explore</a>
+          <a href="#saved"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg>Saved</a>
+          <a href="#map"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Zm0 0v14m6-12v14"/></svg>Map</a>
+          <a href="#search"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.3-4.3"/></svg>Search</a>
+          <a href="#profile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>Profile</a>
+        </nav>
+        <div class="d" style="font-size: 12px">White bar, hairline top border, no shadow. Five 64 px items: 24 px outlined icon, 4 px gap, 12/600 label. Selected = red/600 icon + label (icon stays outlined, as observed). Item component properties: icon swap, label, selected boolean. Bar height 84 px including the 34 px home-indicator area.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

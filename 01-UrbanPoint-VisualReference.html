@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Urban Point visual reference sheet</title>
+</head>
+<body>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#ffffff}
+a{color:#0E7F84}a:hover{color:#0B7378}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:3px 8px;border-radius:999px}
+.obs{background:#E3F6F4;color:#0B7378}
+.est{background:#FFF4D6;color:#7A5300}
+.pro{background:#FDE8E9;color:#C90E17}
+.card{background:#ffffff;border:1px solid #E6E6E6;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:12px}
+.card h3{margin:0;font-size:16px;font-weight:700;color:#1C1C1C}
+.card p{margin:0;font-size:13px;line-height:1.5;color:#4D4D4D}
+.card ul{margin:0;padding-left:16px;font-size:13px;line-height:1.55;color:#4D4D4D}
+.sw{width:28px;height:28px;border-radius:8px;border:1px solid rgba(0,0,0,.08)}
+</style>
+
+<div style="width: 1280px; height: 1180px; box-sizing: border-box; padding: 48px 56px; display: flex; flex-direction: column; gap: 24px; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #1C1C1C">
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px">
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <div style="font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #E3111B">01 · Urban Point</div>
+      <h1 style="margin: 0; font-size: 30px; font-weight: 800; letter-spacing: -.01em">Visual reference sheet</h1>
+      <p style="margin: 0; font-size: 14px; color: #666666; max-width: 760px; line-height: 1.5">Findings from urbanpoint.com, its hero phone render and three in-app screenshots (Explore, Food &amp; Beverages list, Use Again, Savings). The App Store listing served no screenshots. Promotional framing (tilted mockups, oversized headlines, aqua backgrounds) is excluded.</p>
+    </div>
+    <div style="display: flex; gap: 8px; align-items: center; padding-bottom: 6px">
+      <span class="tag obs">Observed</span>
+      <span class="tag est">Estimated</span>
+      <span class="tag pro">Proposed</span>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Colour roles</h3><span class="tag obs">Observed</span></div>
+      <div style="display: flex; gap: 6px">
+        <div class="sw" style="background: #FB1D26"></div>
+        <div class="sw" style="background: #139095"></div>
+        <div class="sw" style="background: #1C1C1C"></div>
+        <div class="sw" style="background: #F5F5F5"></div>
+        <div class="sw" style="background: #E3F6F4"></div>
+        <div class="sw" style="background: #FDE8E9"></div>
+      </div>
+      <ul>
+        <li>White screens, near-black text, light grey tiles and chips (sampled ≈ #F5F5F5).</li>
+        <li>Red (sampled ≈ #FB1D26; site theme-colour #FF001F) only on: active tab, "View All", savings amounts, primary buttons, outline CTA.</li>
+        <li>Teal (sampled ≈ #139095) on utility icons: heart, gift, QR wallet, help, selected filter chip, month ticks.</li>
+        <li>Tints: mint #E3F6F4 behind teal icons; pink tint behind red "April" chip.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Typeface &amp; hierarchy</h3><span class="tag est">Estimated</span></div>
+      <p>Rounded geometric sans, double-storey <b>a</b>, round dots, open <b>g</b>. Matches Gordita / Brandon-type faces. Closest Google font: <b>Plus Jakarta Sans</b> (substitution documented in Foundations).</p>
+      <ul>
+        <li>Screen title ≈ 24–26 px bold (back-arrow row).</li>
+        <li>Greeting ≈ 24 px semibold; section header ≈ 18 px bold.</li>
+        <li>Row title 16–17 px bold; body 14 px medium; meta 13 px grey.</li>
+        <li>Tab label ≈ 12 px semibold; tight letter-spacing, no caps except "SAVE".</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Spacing &amp; alignment</h3><span class="tag est">Estimated</span></div>
+      <ul>
+        <li>Screen gutter ≈ 20 px (390-wide frame).</li>
+        <li>Grid gap between tiles ≈ 12 px; section gap ≈ 24 px.</li>
+        <li>List row padding ≈ 16 px vertical; logo-to-text gap ≈ 16 px.</li>
+        <li>Left-aligned titles; back button and title sit on one 48 px row.</li>
+        <li>Dense: four list rows visible above the fold.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Corner radii &amp; borders</h3><span class="tag est">Estimated</span></div>
+      <div style="display: flex; gap: 8px; align-items: flex-end">
+        <div style="width: 44px; height: 44px; border-radius: 16px; background: #F5F5F5"></div>
+        <div style="width: 60px; height: 32px; border-radius: 999px; background: #0E7F84"></div>
+        <div style="width: 44px; height: 44px; border-radius: 50%; background: #F5F5F5"></div>
+        <div style="width: 70px; height: 40px; border-radius: 24px; background: #E6E6E6"></div>
+      </div>
+      <ul>
+        <li>Category tiles ≈ 16 px; hero banner ≈ 24 px; offer cards ≈ 20 px.</li>
+        <li>Chips, buttons and floating controls fully round.</li>
+        <li>Borders 1 px light grey (≈ #E6E6E6) on cards; hairline separators on rows.</li>
+        <li>Outline CTA: 1.5 px red stroke, 12–14 px radius.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Shadows &amp; elevation</h3><span class="tag est">Estimated</span></div>
+      <div style="height: 40px; border-radius: 12px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.06); border: 1px solid #EEEEEE"></div>
+      <ul>
+        <li>Almost flat. Cards rely on fill or 1 px border; a very soft shadow (≈ 0 2px 10px, 6% black) on offer cards.</li>
+        <li>Bottom navigation: white, hairline top border, no shadow.</li>
+        <li>Floating circular controls: light grey fill, no shadow over white; white fill over photography.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Icons</h3><span class="tag obs">Observed</span></div>
+      <div style="display: flex; gap: 12px; color: #0E7F84">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10h18M3 10v9h18v-9M12 10v9M5 10V7h14v3M8 7c-2-1.5-1-4 1-3.5S12 7 12 7s1-3 3-3.5 3 2 1 3.5"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.3-4.3"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>
+      </div>
+      <ul>
+        <li>Outlined, rounded-joint icons, ≈ 1.8 px stroke at 24 px.</li>
+        <li>Teal for utility (heart, gift, QR), near-black for navigation, red for the active tab.</li>
+        <li>Small filled glyphs (pin, star) in meta rows at ≈ 14 px.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Image crops &amp; masks</h3><span class="tag obs">Observed</span></div>
+      <div style="display: flex; gap: 8px; align-items: center">
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: #E9E4DD"></div>
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: #fff; border: 1px solid #E6E6E6"></div>
+        <div style="width: 84px; height: 48px; border-radius: 12px; background: #E9E4DD"></div>
+      </div>
+      <ul>
+        <li>Cuisine categories: circular photo crops (≈ 76 px) with a 2-line label beneath.</li>
+        <li>Merchant logos: circles (≈ 80 px list, ≈ 72 px cards), white or brand fill.</li>
+        <li>Category tiles: isolated cut-out objects anchored bottom-right, text top-left.</li>
+        <li>Hero banner: full-bleed photo, dark overlay, centred white copy.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Navigation &amp; card proportions</h3><span class="tag est">Estimated</span></div>
+      <ul>
+        <li>Bottom bar ≈ 84 px incl. home indicator; 5 items, icon 24 px over 12 px label.</li>
+        <li>Category tiles: 2-up ≈ 165×115 px, 3-up ≈ 105×115 px.</li>
+        <li>Offer card ≈ 350×130 px with ticket notches on the right edge between heart and gift.</li>
+        <li>Hero banner ≈ 350×200 px.</li>
+        <li>Restaurant row ≈ 110 px tall; 80 px logo, 3 text lines + red offers link.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+    <div class="card" style="background: #FAFAFA">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Accessibility departures</h3><span class="tag pro">Proposed</span></div>
+      <p>Observed red (#FB1D26) and teal (#139095) reach only ≈ 3.9 : 1 on white. For text and icon-only controls the system uses <b>#E3111B</b> (4.8 : 1) and <b>#0E7F84</b> (4.8 : 1); the observed values stay for large display use and brand marks. Secondary grey is set at #666666 (5.7 : 1) instead of the paler observed grey.</p>
+    </div>
+    <div class="card" style="background: #FAFAFA">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Not reproduced</h3><span class="tag pro">Proposed</span></div>
+      <p>Savings streak, QR wallet, gift sharing, monthly reset and subscription messaging are Urban Point features outside LastTable's scope. Their <i>styling</i> (teal tick circles, pink status chip, outline CTA) is kept as component treatments where LastTable has an equivalent.</p>
+    </div>
+    <div class="card" style="background: #FAFAFA">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Source status</h3><span class="tag obs">Observed</span></div>
+      <p>The LastTable Figma file could not be inspected from this session (Figma connector not enabled here). Screen selection follows the brief: Discover, Listing, Details, Saved/Profile. Reconcile against the file before transfer.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

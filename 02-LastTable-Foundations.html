@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LastTable foundations</title>
+</head>
+<body>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#ffffff}
+a{color:#0E7F84}a:hover{color:#0B7378}
+.sec{display:flex;flex-direction:column;gap:16px}
+.sec h2{margin:0;font-size:20px;font-weight:800;color:#1C1C1C}
+.sec p.lead{margin:0;font-size:13px;color:#666666;line-height:1.5}
+.swatch{display:flex;flex-direction:column;gap:8px}
+.swatch .chip{height:64px;border-radius:12px;border:1px solid rgba(0,0,0,.06)}
+.swatch .n{font-size:12px;font-weight:700;color:#1C1C1C}
+.swatch .v{font-size:11px;color:#666666;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.row{display:grid;grid-template-columns:200px 1fr 220px;gap:16px;align-items:baseline;padding:10px 0;border-bottom:1px solid #EEEEEE}
+.row .k{font-size:12px;font-weight:700;color:#1C1C1C}
+.row .spec{font-size:11px;color:#666666;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;text-align:right}
+.geo{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.geo .n{font-size:12px;font-weight:700;color:#1C1C1C}
+.geo .v{font-size:11px;color:#666666;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.sp{background:#E3111B;border-radius:2px;height:12px}
+</style>
+
+<div style="width: 1280px; height: 1520px; box-sizing: border-box; padding: 48px 56px; display: flex; flex-direction: column; gap: 36px; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #1C1C1C">
+  <div style="display: flex; flex-direction: column; gap: 6px">
+    <div style="font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #E3111B">02 · LastTable</div>
+    <h1 style="margin: 0; font-size: 30px; font-weight: 800; letter-spacing: -.01em">Foundations — light mode</h1>
+    <p style="margin: 0; font-size: 14px; color: #666666; line-height: 1.5; max-width: 820px">Primitive tokens derived from the reference, then semantic aliases the components bind to. Frame size 390 × 844 (iOS) kept from the LastTable file; web screens use a 1280 max-width container.</p>
+  </div>
+
+  <div class="sec">
+    <h2>Colour primitives</h2>
+    <div style="display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 14px">
+      <div class="swatch"><div class="chip" style="background: #FB1D26"></div><div class="n">red/brand</div><div class="v">#FB1D26 · observed</div></div>
+      <div class="swatch"><div class="chip" style="background: #E3111B"></div><div class="n">red/600</div><div class="v">#E3111B · proposed</div></div>
+      <div class="swatch"><div class="chip" style="background: #C90E17"></div><div class="n">red/700</div><div class="v">#C90E17 · pressed</div></div>
+      <div class="swatch"><div class="chip" style="background: #FDE8E9"></div><div class="n">red/50</div><div class="v">#FDE8E9 · tint</div></div>
+      <div class="swatch"><div class="chip" style="background: #139095"></div><div class="n">teal/brand</div><div class="v">#139095 · observed</div></div>
+      <div class="swatch"><div class="chip" style="background: #0E7F84"></div><div class="n">teal/600</div><div class="v">#0E7F84 · proposed</div></div>
+      <div class="swatch"><div class="chip" style="background: #0B7378"></div><div class="n">teal/700</div><div class="v">#0B7378 · pressed</div></div>
+      <div class="swatch"><div class="chip" style="background: #E3F6F4"></div><div class="n">teal/50</div><div class="v">#E3F6F4 · tint</div></div>
+      <div class="swatch"><div class="chip" style="background: #1C1C1C"></div><div class="n">grey/900</div><div class="v">#1C1C1C</div></div>
+      <div class="swatch"><div class="chip" style="background: #666666"></div><div class="n">grey/600</div><div class="v">#666666</div></div>
+      <div class="swatch"><div class="chip" style="background: #9A9A9A"></div><div class="n">grey/400</div><div class="v">#9A9A9A · decorative only</div></div>
+      <div class="swatch"><div class="chip" style="background: #E6E6E6"></div><div class="n">grey/200</div><div class="v">#E6E6E6</div></div>
+      <div class="swatch"><div class="chip" style="background: #F5F5F5"></div><div class="n">grey/100</div><div class="v">#F5F5F5</div></div>
+      <div class="swatch"><div class="chip" style="background: #FAFAFA"></div><div class="n">grey/50</div><div class="v">#FAFAFA</div></div>
+      <div class="swatch"><div class="chip" style="background: #FFFFFF"></div><div class="n">white</div><div class="v">#FFFFFF</div></div>
+      <div class="swatch"><div class="chip" style="background: #F2B01E"></div><div class="n">amber/500</div><div class="v">#F2B01E · star only</div></div>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px">
+    <div class="sec">
+      <h2>Semantic aliases</h2>
+      <div style="display: flex; flex-direction: column">
+        <div class="row"><div class="k">bg/canvas</div><div style="height: 14px; border-radius: 4px; background: #FFFFFF; border: 1px solid #E6E6E6"></div><div class="spec">white</div></div>
+        <div class="row"><div class="k">bg/subtle</div><div style="height: 14px; border-radius: 4px; background: #F5F5F5"></div><div class="spec">grey/100</div></div>
+        <div class="row"><div class="k">bg/tint-teal</div><div style="height: 14px; border-radius: 4px; background: #E3F6F4"></div><div class="spec">teal/50</div></div>
+        <div class="row"><div class="k">bg/tint-red</div><div style="height: 14px; border-radius: 4px; background: #FDE8E9"></div><div class="spec">red/50</div></div>
+        <div class="row"><div class="k">text/primary</div><div style="height: 14px; border-radius: 4px; background: #1C1C1C"></div><div class="spec">grey/900</div></div>
+        <div class="row"><div class="k">text/secondary</div><div style="height: 14px; border-radius: 4px; background: #666666"></div><div class="spec">grey/600</div></div>
+        <div class="row"><div class="k">text/on-primary</div><div style="height: 14px; border-radius: 4px; background: #FFFFFF; border: 1px solid #E6E6E6"></div><div class="spec">white</div></div>
+        <div class="row"><div class="k">border/default</div><div style="height: 14px; border-radius: 4px; background: #E6E6E6"></div><div class="spec">grey/200</div></div>
+        <div class="row"><div class="k">border/subtle</div><div style="height: 14px; border-radius: 4px; background: #EEEEEE"></div><div class="spec">#EEEEEE</div></div>
+        <div class="row"><div class="k">action/primary</div><div style="height: 14px; border-radius: 4px; background: #E3111B"></div><div class="spec">red/600 · pressed red/700</div></div>
+        <div class="row"><div class="k">accent/utility</div><div style="height: 14px; border-radius: 4px; background: #0E7F84"></div><div class="spec">teal/600 · pressed teal/700</div></div>
+        <div class="row"><div class="k">selection/nav-active</div><div style="height: 14px; border-radius: 4px; background: #E3111B"></div><div class="spec">red/600</div></div>
+        <div class="row"><div class="k">selection/chip-active</div><div style="height: 14px; border-radius: 4px; background: #0E7F84"></div><div class="spec">teal/600 · text white</div></div>
+        <div class="row"><div class="k">rating/star</div><div style="height: 14px; border-radius: 4px; background: #F2B01E"></div><div class="spec">amber/500</div></div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <h2>Typography</h2>
+      <p class="lead"><b>Plus Jakarta Sans</b> (Google Fonts) substitutes for the reference's rounded geometric face — closest match on double-storey a, round dots and stroke contrast. All sizes are the reference's mobile scale, not its advertising scale. Letter-spacing −0.01em on 20 px and above.</p>
+      <div style="display: flex; flex-direction: column">
+        <div class="row"><div class="k">display/greeting</div><div style="font-size: 26px; font-weight: 700; line-height: 32px">Good evening, Basel</div><div class="spec">26 / 32 · 700</div></div>
+        <div class="row"><div class="k">title/screen</div><div style="font-size: 24px; font-weight: 700; line-height: 30px">Restaurants nearby</div><div class="spec">24 / 30 · 700</div></div>
+        <div class="row"><div class="k">title/section</div><div style="font-size: 18px; font-weight: 700; line-height: 24px">Tonight's tables</div><div class="spec">18 / 24 · 700</div></div>
+        <div class="row"><div class="k">title/card</div><div style="font-size: 16px; font-weight: 700; line-height: 22px">Etto — Merrion Row</div><div class="spec">16 / 22 · 700</div></div>
+        <div class="row"><div class="k">body/default</div><div style="font-size: 14px; font-weight: 500; line-height: 20px">Seasonal Italian, walk-ins after 9 pm.</div><div class="spec">14 / 20 · 500</div></div>
+        <div class="row"><div class="k">body/meta</div><div style="font-size: 13px; font-weight: 500; line-height: 18px; color: #666666">1.2 km · 4.6 (813) · €€</div><div class="spec">13 / 18 · 500 · secondary</div></div>
+        <div class="row"><div class="k">label/button</div><div style="font-size: 15px; font-weight: 700; line-height: 20px">Book this table</div><div class="spec">15 / 20 · 700</div></div>
+        <div class="row"><div class="k">label/chip</div><div style="font-size: 14px; font-weight: 600; line-height: 18px">Nearby</div><div class="spec">14 / 18 · 600</div></div>
+        <div class="row"><div class="k">label/nav</div><div style="font-size: 12px; font-weight: 600; line-height: 14px">Explore</div><div class="spec">12 / 14 · 600</div></div>
+        <div class="row"><div class="k">label/caps</div><div style="font-size: 12px; font-weight: 600; line-height: 16px; letter-spacing: .02em">SAVE <span style="color: #E3111B">€18</span></div><div class="spec">12 / 16 · 600 · +0.02em</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>Geometry</h2>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <div style="font-size: 13px; font-weight: 700; color: #666666">Spacing scale</div>
+        <div class="geo"><div class="sp" style="width: 4px"></div><div class="v">space/1 · 4</div></div>
+        <div class="geo"><div class="sp" style="width: 8px"></div><div class="v">space/2 · 8</div></div>
+        <div class="geo"><div class="sp" style="width: 12px"></div><div class="v">space/3 · 12 · tile gap</div></div>
+        <div class="geo"><div class="sp" style="width: 16px"></div><div class="v">space/4 · 16 · row padding</div></div>
+        <div class="geo"><div class="sp" style="width: 20px"></div><div class="v">space/5 · 20 · screen gutter</div></div>
+        <div class="geo"><div class="sp" style="width: 24px"></div><div class="v">space/6 · 24 · section gap</div></div>
+        <div class="geo"><div class="sp" style="width: 32px"></div><div class="v">space/8 · 32</div></div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <div style="font-size: 13px; font-weight: 700; color: #666666">Radii</div>
+        <div style="display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap">
+          <div class="geo"><div style="width: 48px; height: 48px; background: #F5F5F5; border-radius: 8px"></div><div class="v">r/sm 8</div></div>
+          <div class="geo"><div style="width: 48px; height: 48px; background: #F5F5F5; border-radius: 12px"></div><div class="v">r/md 12</div></div>
+          <div class="geo"><div style="width: 48px; height: 48px; background: #F5F5F5; border-radius: 16px"></div><div class="v">r/lg 16</div></div>
+          <div class="geo"><div style="width: 48px; height: 48px; background: #F5F5F5; border-radius: 24px"></div><div class="v">r/xl 24</div></div>
+          <div class="geo"><div style="width: 48px; height: 48px; background: #F5F5F5; border-radius: 999px"></div><div class="v">r/full</div></div>
+        </div>
+        <div class="v" style="line-height: 1.6">tile 16 · card 20 · banner 24 · button 12 · chip/control full · input 12</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <div style="font-size: 13px; font-weight: 700; color: #666666">Borders &amp; shadows</div>
+        <div class="geo"><div style="width: 160px; height: 44px; border: 1px solid #E6E6E6; border-radius: 12px; background: #fff"></div><div class="v">border/1 · 1px grey/200</div></div>
+        <div class="geo"><div style="width: 160px; height: 44px; border: 1.5px solid #E3111B; border-radius: 12px; background: #fff"></div><div class="v">border/accent · 1.5px red/600</div></div>
+        <div class="geo"><div style="width: 160px; height: 44px; border-radius: 12px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.06)"></div><div class="v">shadow/card · 0 2 10 · 6%</div></div>
+        <div class="geo"><div style="width: 160px; height: 44px; border-radius: 12px; background: #fff; box-shadow: 0 6px 20px rgba(0,0,0,.12)"></div><div class="v">shadow/float · 0 6 20 · 12%</div></div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <div style="font-size: 13px; font-weight: 700; color: #666666">Icon sizes &amp; strokes</div>
+        <div style="display: flex; gap: 16px; align-items: flex-end; color: #0E7F84">
+          <div class="geo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg><div class="v">16 · meta</div></div>
+          <div class="geo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg><div class="v">20 · chip</div></div>
+          <div class="geo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg><div class="v">24 · nav/utility</div></div>
+          <div class="geo"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg><div class="v">28 · detail</div></div>
+        </div>
+        <div class="v" style="line-height: 1.6">Stroke 1.8 at 24 px, round caps and joins. Circular control 44 px; logo circle 80 / 72 / 56; cuisine circle 76. Touch target ≥ 44.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
