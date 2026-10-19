@@ -1,0 +1,953 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>LastTable × Urban Point — 1280 bundle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#E6E6E6} .pg{background:#fff} .gap{height:120px}
+#pg1 a{color:#0E7F84}
+#pg1 a:hover{color:#0B7378}
+#pg1 .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:3px 8px;border-radius:999px}
+#pg1 .obs{background:#E3F6F4;color:#0B7378}
+#pg1 .est{background:#FFF4D6;color:#7A5300}
+#pg1 .pro{background:#FDE8E9;color:#C90E17}
+#pg1 .card{background:#ffffff;border:1px solid #E6E6E6;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:12px}
+#pg1 .card h3{margin:0;font-size:16px;font-weight:700;color:#1C1C1C}
+#pg1 .card p{margin:0;font-size:13px;line-height:1.5;color:#4D4D4D}
+#pg1 .card ul{margin:0;padding-left:16px;font-size:13px;line-height:1.55;color:#4D4D4D}
+#pg1 .sw{width:28px;height:28px;border-radius:8px;border:1px solid rgba(0,0,0,.08)}
+#pg2 a{color:#0E7F84}
+#pg2 a:hover{color:#0B7378}
+#pg2 .sec{display:flex;flex-direction:column;gap:16px}
+#pg2 .sec h2{margin:0;font-size:20px;font-weight:800;color:#1C1C1C}
+#pg2 .sec p.lead{margin:0;font-size:13px;color:#666666;line-height:1.5}
+#pg2 .swatch{display:flex;flex-direction:column;gap:8px}
+#pg2 .swatch .chip{height:64px;border-radius:12px;border:1px solid rgba(0,0,0,.06)}
+#pg2 .swatch .n{font-size:12px;font-weight:700;color:#1C1C1C}
+#pg2 .swatch .v{font-size:11px;color:#666666;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+#pg2 .row{display:grid;grid-template-columns:150px 1fr 170px;gap:16px;align-items:baseline;padding:10px 0;border-bottom:1px solid #EEEEEE}
+#pg2 .row>div:nth-child(2){white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#pg2 .row .k{font-size:12px;font-weight:700;color:#1C1C1C}
+#pg2 .row .spec{font-size:11px;color:#666666;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;text-align:right}
+#pg2 .geo{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+#pg2 .geo .n{font-size:12px;font-weight:700;color:#1C1C1C}
+#pg2 .geo .v{font-size:11px;color:#666666;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+#pg2 .sp{background:#E3111B;border-radius:2px;height:12px}
+#pg3 a{color:#0E7F84}
+#pg3 a:hover{color:#0B7378}
+#pg3 .spec{display:flex;flex-direction:column;gap:14px;padding:20px;border:1px solid #EEEEEE;border-radius:16px;background:#fff}
+#pg3 .spec h3{margin:0;font-size:14px;font-weight:800;color:#1C1C1C}
+#pg3 .spec .d{font-size:11px;color:#666666;line-height:1.5}
+#pg3 .lbl{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#666666}
+#pg3 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 20px;border-radius:12px;font:700 15px/20px 'Plus Jakarta Sans',system-ui,sans-serif;border:0;cursor:pointer;box-sizing:border-box}
+#pg3 .btn-p{background:#E3111B;color:#fff}
+#pg3 .btn-p.pressed{background:#C90E17}
+#pg3 .btn-p.dis{background:#F5F5F5;color:#9A9A9A}
+#pg3 .btn-s{background:#fff;color:#E3111B;border:1.5px solid #E3111B}
+#pg3 .btn-s.pressed{background:#FDE8E9}
+#pg3 .btn-s.dis{border-color:#E6E6E6;color:#9A9A9A}
+#pg3 .btn-t{background:#0E7F84;color:#fff}
+#pg3 .btn-sm{height:36px;padding:0 14px;font-size:13px;border-radius:999px}
+#pg3 .ico{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;border:0;background:#F5F5F5;color:#1C1C1C;cursor:pointer}
+#pg3 .ico.teal{color:#0E7F84}
+#pg3 .ico.white{background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+#pg3 .ico.red{background:#E3111B;color:#fff}
+#pg3 .ico.sm{width:32px;height:32px}
+#pg3 .rw{position:relative}
+#pg3 .heart{position:absolute;right:-10px;top:6px;width:44px;height:44px;border:0;background:transparent;padding:0;display:inline-flex;align-items:center;justify-content:center;color:#0E7F84;cursor:pointer}
+#pg3 .ow{position:relative}
+#pg3 .ob{position:absolute;right:8px;width:44px;height:44px;border:0;background:transparent;padding:0;display:inline-flex;align-items:center;justify-content:center;color:#0E7F84;cursor:pointer}
+#pg3 .tile.s3{font-size:15px;line-height:20px;padding:14px}
+#pg3 .tile.s3 .obj{width:64px;height:64px;right:0;bottom:0}
+#pg3 .focus{outline:2px solid #0E7F84;outline-offset:2px}
+#pg3 .search{display:flex;align-items:center;gap:10px;height:48px;padding:0 16px;border-radius:12px;background:#F5F5F5;color:#666666;font:500 14px 'Plus Jakarta Sans',system-ui,sans-serif;box-sizing:border-box}
+#pg3 .search input{border:0;background:transparent;font:inherit;color:#1C1C1C;flex:1;min-width:0;outline:none}
+#pg3 .search.focus{background:#fff;border:1.5px solid #0E7F84;outline:0}
+#pg3 .chip{display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 16px;border-radius:999px;background:#F5F5F5;color:#1C1C1C;font:600 14px 'Plus Jakarta Sans',system-ui,sans-serif;border:0;cursor:pointer;white-space:nowrap}
+#pg3 .chip.sel{background:#0E7F84;color:#fff}
+#pg3 .chip.pressed{background:#E6E6E6}
+#pg3 .chip.dis{color:#9A9A9A}
+#pg3 .tile{position:relative;overflow:hidden;border-radius:16px;background:#F5F5F5;padding:16px;box-sizing:border-box;display:flex;flex-direction:column;text-decoration:none;color:#1C1C1C;font:700 16px/22px 'Plus Jakarta Sans',system-ui,sans-serif}
+#pg3 .tile .obj{position:absolute;right:8px;bottom:6px;width:76px;height:76px;border-radius:50%}
+#pg3 .tile.sel{outline:2px solid #E3111B;outline-offset:-2px}
+#pg3 .ph{background:#E9E4DD;color:#7A6F62;display:flex;align-items:center;justify-content:center;text-align:center;font:600 10px/1.3 'Plus Jakarta Sans',system-ui,sans-serif;overflow:hidden}
+#pg3 .cuis{display:flex;flex-direction:column;align-items:center;gap:8px;width:84px;text-decoration:none;color:#1C1C1C;font:600 14px/18px 'Plus Jakarta Sans',system-ui,sans-serif;text-align:center}
+#pg3 .cuis .ph{width:76px;height:76px;border-radius:50%}
+#pg3 .cuis.sel .ph{box-shadow:0 0 0 3px #fff,0 0 0 5px #E3111B}
+#pg3 .logo{width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:800 18px 'Plus Jakarta Sans',system-ui,sans-serif;color:#fff;flex:none;letter-spacing:-.02em}
+#pg3 .logo.ring{background:#fff;color:#1C1C1C;border:1px solid #E6E6E6}
+#pg3 .rrow{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid #EEEEEE;text-decoration:none;color:#1C1C1C;font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+#pg3 .rrow .t{font-size:16px;font-weight:700;line-height:22px}
+#pg3 .rrow .s{font-size:13px;color:#666666;line-height:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#pg3 .meta{display:flex;align-items:center;gap:6px;font:500 13px/18px 'Plus Jakarta Sans',system-ui,sans-serif;color:#666666;flex-wrap:wrap}
+#pg3 .meta .dot{width:3px;height:3px;border-radius:50%;background:#C8C8C8}
+#pg3 .meta svg{flex:none}
+#pg3 .link-r{color:#E3111B;font-weight:700;text-decoration:underline;text-underline-offset:3px;font-size:14px;display:inline-flex;align-items:center;gap:6px}
+#pg3 .ocard{position:relative;overflow:hidden;display:flex;gap:14px;padding:16px;border-radius:20px;border:1px solid #E6E6E6;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.06);font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1C1C1C;text-decoration:none;box-sizing:border-box}
+#pg3 .ocard .notch{position:absolute;right:-9px;width:18px;height:18px;border-radius:50%;background:#fff;border:1px solid #E6E6E6}
+#pg3 .rcard{display:flex;flex-direction:column;border-radius:20px;border:1px solid #E6E6E6;background:#fff;overflow:hidden;text-decoration:none;color:#1C1C1C;font-family:'Plus Jakarta Sans',system-ui,sans-serif;box-sizing:border-box}
+#pg3 .sect{display:flex;justify-content:space-between;align-items:center;font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+#pg3 .sect h2{margin:0;font-size:18px;font-weight:700;line-height:24px;color:#1C1C1C}
+#pg3 .sect a{display:inline-flex;align-items:center;gap:8px;color:#E3111B;font:700 14px 'Plus Jakarta Sans',system-ui,sans-serif;text-decoration:none}
+#pg3 .nav{display:flex;justify-content:space-around;align-items:flex-start;padding:10px 8px 0;border-top:1px solid #EEEEEE;background:#fff;height:84px;box-sizing:border-box;font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+#pg3 .nav a{display:flex;flex-direction:column;align-items:center;gap:4px;width:64px;text-decoration:none;color:#1C1C1C;font:600 12px/14px 'Plus Jakarta Sans',system-ui,sans-serif;padding:4px 0}
+#pg3 .nav a.on{color:#E3111B}
+#pg3 .prow{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid #EEEEEE;text-decoration:none;color:#1C1C1C;font:600 15px/20px 'Plus Jakarta Sans',system-ui,sans-serif}
+#pg3 .prow .pi{width:40px;height:40px;border-radius:12px;background:#E3F6F4;color:#0E7F84;display:flex;align-items:center;justify-content:center;flex:none}
+#pg3 .stars{display:inline-flex;gap:2px;color:#F2B01E}
+#pg3 .pill{display:inline-flex;align-items:center;height:28px;padding:0 12px;border-radius:999px;font:700 12px 'Plus Jakarta Sans',system-ui,sans-serif}
+#pg3 .pill.red{background:#FDE8E9;color:#C90E17}
+#pg3 .pill.teal{background:#E3F6F4;color:#0B7378}
+#pg4 a{color:#0E7F84}
+#pg4 a:hover{color:#0B7378}
+#pg4 .wrap{max-width:1180px;margin:0 auto;padding:0 20px;box-sizing:border-box}
+#pg4 .topnav a.nl{color:#1C1C1C;text-decoration:none;font:600 14px 'Plus Jakarta Sans',system-ui,sans-serif;padding:8px 0}
+#pg4 .topnav a.nl.on{color:#E3111B}
+#pg4 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 18px;border-radius:12px;font:700 14px/20px 'Plus Jakarta Sans',system-ui,sans-serif;border:0;cursor:pointer;box-sizing:border-box;text-decoration:none;white-space:nowrap}
+#pg4 .btn-p{background:#E3111B;color:#fff}
+#pg4 .btn-s{background:#fff;color:#E3111B;border:1.5px solid #E3111B}
+#pg4 .ico{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:999px;border:0;background:#E3111B;color:#fff}
+#pg4 .rw{position:relative;min-width:0}
+#pg4 .heart{position:absolute;right:-10px;top:6px;width:44px;height:44px;border:0;background:transparent;padding:0;display:inline-flex;align-items:center;justify-content:center;color:#0E7F84;cursor:pointer}
+#pg4 .ow{position:relative;min-width:0}
+#pg4 .ob{position:absolute;right:8px;width:44px;height:44px;border:0;background:transparent;padding:0;display:inline-flex;align-items:center;justify-content:center;color:#0E7F84;cursor:pointer}
+#pg4 .search{display:flex;align-items:center;gap:10px;height:44px;padding:0 16px;border-radius:12px;background:#F5F5F5;color:#666666;font:500 14px 'Plus Jakarta Sans',system-ui,sans-serif;box-sizing:border-box;flex:1 1 260px;min-width:0}
+#pg4 .search input{border:0;background:transparent;font:inherit;color:#1C1C1C;flex:1;min-width:0;outline:none}
+#pg4 .tile{position:relative;overflow:hidden;border-radius:16px;background:#F5F5F5;padding:16px;box-sizing:border-box;display:flex;flex-direction:column;text-decoration:none;color:#1C1C1C;font:700 16px/22px 'Plus Jakarta Sans',system-ui,sans-serif;height:115px}
+#pg4 .tile .obj{position:absolute;right:8px;bottom:6px;width:76px;height:76px;border-radius:50%}
+#pg4 .ph{background:#E9E4DD;color:#7A6F62;display:flex;align-items:center;justify-content:center;text-align:center;font:600 10px/1.3 'Plus Jakarta Sans',system-ui,sans-serif;overflow:hidden}
+#pg4 .cuis{display:flex;flex-direction:column;align-items:center;gap:8px;width:84px;flex:none;text-decoration:none;color:#1C1C1C;font:600 14px/18px 'Plus Jakarta Sans',system-ui,sans-serif;text-align:center}
+#pg4 .cuis .ph{width:76px;height:76px;border-radius:50%;flex:none}
+#pg4 .cuis.sel .ph{box-shadow:0 0 0 3px #fff,0 0 0 5px #E3111B}
+#pg4 .chip{display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 16px;border-radius:999px;background:#F5F5F5;color:#1C1C1C;font:600 14px 'Plus Jakarta Sans',system-ui,sans-serif;border:0;cursor:pointer;white-space:nowrap}
+#pg4 .chip.sel{background:#0E7F84;color:#fff}
+#pg4 .logo{border-radius:50%;display:flex;align-items:center;justify-content:center;font:800 16px 'Plus Jakarta Sans',system-ui,sans-serif;color:#fff;flex:none;letter-spacing:-.02em;width:72px;height:72px}
+#pg4 .logo.ring{background:#fff;color:#1C1C1C;border:1px solid #E6E6E6}
+#pg4 .ocard{position:relative;overflow:hidden;display:flex;gap:14px;padding:16px;border-radius:20px;border:1px solid #E6E6E6;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.06);color:#1C1C1C;text-decoration:none;box-sizing:border-box;min-width:0}
+#pg4 .ocard .notch{position:absolute;right:-9px;width:18px;height:18px;border-radius:50%;background:#fff;border:1px solid #E6E6E6}
+#pg4 .rrow{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid #EEEEEE;text-decoration:none;color:#1C1C1C;min-width:0}
+#pg4 .rrow .t{font-size:16px;font-weight:700;line-height:22px}
+#pg4 .rrow .s{font-size:13px;color:#666666;line-height:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#pg4 .meta{display:flex;align-items:center;gap:6px;font:500 13px/18px 'Plus Jakarta Sans',system-ui,sans-serif;color:#666666;flex-wrap:wrap}
+#pg4 .meta .dot{width:3px;height:3px;border-radius:50%;background:#C8C8C8}
+#pg4 .link-r{color:#E3111B;font-weight:700;text-decoration:underline;text-underline-offset:3px;font-size:14px;display:inline-flex;align-items:center;gap:6px;padding-top:2px}
+#pg4 .heart{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;color:#0E7F84;flex:none}
+#pg4 .sect{display:flex;justify-content:space-between;align-items:center;gap:12px}
+#pg4 .sect h2{margin:0;font-size:22px;font-weight:700;line-height:28px;color:#1C1C1C;letter-spacing:-.01em}
+#pg4 .sect a{display:inline-flex;align-items:center;gap:8px;color:#E3111B;font:700 14px 'Plus Jakarta Sans',system-ui,sans-serif;text-decoration:none}
+#pg4 .foot a{color:#666666;text-decoration:none;font:500 13px 'Plus Jakarta Sans',system-ui,sans-serif}
+#pg5 a{color:#0E7F84}
+#pg5 a:hover{color:#0B7378}
+#pg5 .wrap{max-width:1180px;margin:0 auto;padding:0 20px;box-sizing:border-box}
+#pg5 .topnav a.nl{color:#1C1C1C;text-decoration:none;font:600 14px 'Plus Jakarta Sans',system-ui,sans-serif;padding:8px 0}
+#pg5 .topnav a.nl.on{color:#E3111B}
+#pg5 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 20px;border-radius:12px;font:700 15px/20px 'Plus Jakarta Sans',system-ui,sans-serif;border:0;cursor:pointer;box-sizing:border-box;text-decoration:none;white-space:nowrap}
+#pg5 .btn-p{background:#E3111B;color:#fff}
+#pg5 .btn-s{background:#fff;color:#E3111B;border:1.5px solid #E3111B}
+#pg5 .ico{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;border:0;background:#fff;color:#1C1C1C;cursor:pointer;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+#pg5 .ico.teal{color:#0E7F84}
+#pg5 .search{display:flex;align-items:center;gap:10px;height:44px;padding:0 16px;border-radius:12px;background:#F5F5F5;color:#666666;font:500 14px 'Plus Jakarta Sans',system-ui,sans-serif;box-sizing:border-box;flex:1 1 260px;min-width:0}
+#pg5 .search input{border:0;background:transparent;font:inherit;color:#1C1C1C;flex:1;min-width:0;outline:none}
+#pg5 .ph{background:#E9E4DD;color:#7A6F62;display:flex;align-items:center;justify-content:center;text-align:center;font:600 10px/1.3 'Plus Jakarta Sans',system-ui,sans-serif;overflow:hidden}
+#pg5 .logo{border-radius:50%;display:flex;align-items:center;justify-content:center;font:800 22px 'Plus Jakarta Sans',system-ui,sans-serif;color:#fff;flex:none;letter-spacing:-.02em;width:96px;height:96px;box-shadow:0 0 0 5px #fff}
+#pg5 .meta{display:flex;align-items:center;gap:6px;font:500 14px/20px 'Plus Jakarta Sans',system-ui,sans-serif;color:#666666;flex-wrap:wrap}
+#pg5 .meta .dot{width:3px;height:3px;border-radius:50%;background:#C8C8C8}
+#pg5 .pill{display:inline-flex;align-items:center;height:28px;padding:0 12px;border-radius:999px;font:700 12px 'Plus Jakarta Sans',system-ui,sans-serif}
+#pg5 .pill.red{background:#FDE8E9;color:#C90E17}
+#pg5 .pill.teal{background:#E3F6F4;color:#0B7378}
+#pg5 .slot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border:1px solid #E6E6E6;border-radius:16px;background:#fff;text-decoration:none;color:#1C1C1C}
+#pg5 .slot.sel{border:1.5px solid #E3111B;background:#FFF6F6}
+#pg5 .card{border:1px solid #E6E6E6;border-radius:20px;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:20px;box-sizing:border-box;display:flex;flex-direction:column;gap:12px}
+#pg5 .h2{margin:0;font-size:20px;font-weight:700;line-height:26px;letter-spacing:-.01em}
+#pg5 .info{display:flex;gap:12px;align-items:flex-start;font:500 14px/20px 'Plus Jakarta Sans',system-ui,sans-serif;color:#1C1C1C}
+#pg5 .info svg{flex:none;color:#0E7F84}
+#pg5 .rev{display:flex;flex-direction:column;gap:6px;padding:14px 0;border-bottom:1px solid #EEEEEE}
+#pg5 .stars{display:inline-flex;gap:2px;color:#F2B01E}
+#pg5 .foot a{color:#666666;text-decoration:none;font:500 13px 'Plus Jakarta Sans',system-ui,sans-serif}
+#pg5 .mosaic{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:12px;aspect-ratio:3/1;border-radius:24px;overflow:hidden}
+#pg5 .mosaic .ph:first-child{grid-row:span 2}
+@media (max-width:640px){#pg5 .mosaic{grid-template-columns:1fr;grid-template-rows:auto;aspect-ratio:16/10}
+#pg5 .mosaic .ph:first-child{grid-row:auto}
+#pg5 .mosaic .ph:nth-child(n+2){display:none}}</style></head><body>
+<div id="pg1" class="pg" data-name="01 Visual Reference">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#ffffff}
+a{color:#0E7F84}a:hover{color:#0B7378}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:3px 8px;border-radius:999px}
+.obs{background:#E3F6F4;color:#0B7378}
+.est{background:#FFF4D6;color:#7A5300}
+.pro{background:#FDE8E9;color:#C90E17}
+.card{background:#ffffff;border:1px solid #E6E6E6;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:12px}
+.card h3{margin:0;font-size:16px;font-weight:700;color:#1C1C1C}
+.card p{margin:0;font-size:13px;line-height:1.5;color:#4D4D4D}
+.card ul{margin:0;padding-left:16px;font-size:13px;line-height:1.55;color:#4D4D4D}
+.sw{width:28px;height:28px;border-radius:8px;border:1px solid rgba(0,0,0,.08)}
+</style>
+
+<div style="width: 1280px; height: 1240px; box-sizing: border-box; padding: 48px 56px; display: flex; flex-direction: column; gap: 24px; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #1C1C1C">
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px">
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <div style="font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #E3111B">01 · Urban Point</div>
+      <h1 style="margin: 0; font-size: 30px; font-weight: 800; letter-spacing: -.01em">Visual reference sheet</h1>
+      <p style="margin: 0; font-size: 14px; color: #666666; max-width: 760px; line-height: 1.5">Findings from urbanpoint.com, its hero phone render and three in-app screenshots (Explore, Food &amp; Beverages list, Use Again, Savings). The App Store listing served no screenshots. Promotional framing (tilted mockups, oversized headlines, aqua backgrounds) is excluded.</p>
+    </div>
+    <div style="display: flex; gap: 8px; align-items: center; padding-bottom: 6px">
+      <span class="tag obs">Observed</span>
+      <span class="tag est">Estimated</span>
+      <span class="tag pro">Proposed</span>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Colour roles</h3><span class="tag obs">Observed</span></div>
+      <div style="display: flex; gap: 6px">
+        <div class="sw" style="background: #FB1D26"></div>
+        <div class="sw" style="background: #139095"></div>
+        <div class="sw" style="background: #1C1C1C"></div>
+        <div class="sw" style="background: #F5F5F5"></div>
+        <div class="sw" style="background: #E3F6F4"></div>
+        <div class="sw" style="background: #FDE8E9"></div>
+      </div>
+      <ul>
+        <li>White screens, near-black text, light grey tiles and chips (sampled ≈ #F5F5F5).</li>
+        <li>Red (sampled ≈ #FB1D26; site theme-colour #FF001F) only on: active tab, "View All", savings amounts, primary buttons, outline CTA.</li>
+        <li>Teal (sampled ≈ #139095) on utility icons: heart, gift, QR wallet, help, selected filter chip, month ticks.</li>
+        <li>Tints: mint #E3F6F4 behind teal icons; pink tint behind red "April" chip.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Typeface &amp; hierarchy</h3><span class="tag est">Estimated</span></div>
+      <p>Rounded geometric sans, double-storey <b>a</b>, round dots, open <b>g</b>. Matches Gordita / Brandon-type faces. Closest Google font: <b>Plus Jakarta Sans</b> (substitution documented in Foundations).</p>
+      <ul>
+        <li>Screen title ≈ 24–26 px bold (back-arrow row).</li>
+        <li>Greeting ≈ 24 px semibold; section header ≈ 18 px bold.</li>
+        <li>Row title 16–17 px bold; body 14 px medium; meta 13 px grey.</li>
+        <li>Tab label ≈ 12 px semibold; tight letter-spacing, no caps except "SAVE".</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Spacing &amp; alignment</h3><span class="tag est">Estimated</span></div>
+      <ul>
+        <li>Screen gutter ≈ 20 px (390-wide frame).</li>
+        <li>Grid gap between tiles ≈ 12 px; section gap ≈ 24 px.</li>
+        <li>List row padding ≈ 16 px vertical; logo-to-text gap ≈ 16 px.</li>
+        <li>Left-aligned titles; back button and title sit on one 48 px row.</li>
+        <li>Dense: four list rows visible above the fold.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Corner radii &amp; borders</h3><span class="tag est">Estimated</span></div>
+      <div style="display: flex; gap: 8px; align-items: flex-end">
+        <div style="width: 44px; height: 44px; border-radius: 16px; background: #F5F5F5"></div>
+        <div style="width: 60px; height: 32px; border-radius: 999px; background: #0E7F84"></div>
+        <div style="width: 44px; height: 44px; border-radius: 50%; background: #F5F5F5"></div>
+        <div style="width: 70px; height: 40px; border-radius: 24px; background: #E6E6E6"></div>
+      </div>
+      <ul>
+        <li>Category tiles ≈ 16 px; hero banner ≈ 24 px; offer cards ≈ 20 px.</li>
+        <li>Chips, buttons and floating controls fully round.</li>
+        <li>Borders 1 px light grey (≈ #E6E6E6) on cards; hairline separators on rows.</li>
+        <li>Outline CTA: 1.5 px red stroke, 12–14 px radius.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Shadows &amp; elevation</h3><span class="tag est">Estimated</span></div>
+      <div style="height: 40px; border-radius: 12px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.06); border: 1px solid #EEEEEE"></div>
+      <ul>
+        <li>Almost flat. Cards rely on fill or 1 px border; a very soft shadow (≈ 0 2px 10px, 6% black) on offer cards.</li>
+        <li>Bottom navigation: white, hairline top border, no shadow.</li>
+        <li>Floating circular controls: light grey fill, no shadow over white; white fill over photography.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Icons</h3><span class="tag obs">Observed</span></div>
+      <div style="display: flex; gap: 12px; color: #0E7F84">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10h18M3 10v9h18v-9M12 10v9M5 10V7h14v3M8 7c-2-1.5-1-4 1-3.5S12 7 12 7s1-3 3-3.5 3 2 1 3.5"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.3-4.3"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>
+      </div>
+      <ul>
+        <li>Outlined, rounded-joint icons, ≈ 1.8 px stroke at 24 px.</li>
+        <li>Teal for utility (heart, gift, QR), near-black for navigation, red for the active tab.</li>
+        <li>Small filled glyphs (pin, star) in meta rows at ≈ 14 px.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Image crops &amp; masks</h3><span class="tag obs">Observed</span></div>
+      <div style="display: flex; gap: 8px; align-items: center">
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: #E9E4DD"></div>
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: #fff; border: 1px solid #E6E6E6"></div>
+        <div style="width: 84px; height: 48px; border-radius: 12px; background: #E9E4DD"></div>
+      </div>
+      <ul>
+        <li>Cuisine categories: circular photo crops (≈ 76 px) with a 2-line label beneath.</li>
+        <li>Merchant logos: circles (≈ 80 px list, ≈ 72 px cards), white or brand fill.</li>
+        <li>Category tiles: isolated cut-out objects anchored bottom-right, text top-left.</li>
+        <li>Hero banner: full-bleed photo, dark overlay, centred white copy.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Navigation &amp; card proportions</h3><span class="tag est">Estimated</span></div>
+      <ul>
+        <li>Bottom bar ≈ 84 px incl. home indicator; 5 items, icon 24 px over 12 px label.</li>
+        <li>Category tiles: 2-up ≈ 165×115 px, 3-up ≈ 105×115 px.</li>
+        <li>Offer card ≈ 350×130 px with ticket notches on the right edge between heart and gift.</li>
+        <li>Hero banner ≈ 350×200 px.</li>
+        <li>Restaurant row ≈ 110 px tall; 80 px logo, 3 text lines + red offers link.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+    <div class="card" style="background: #FAFAFA">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Accessibility departures</h3><span class="tag pro">Proposed</span></div>
+      <p>Observed red (#FB1D26) and teal (#139095) reach only ≈ 3.9 : 1 on white. For text and icon-only controls the system uses <b>#E3111B</b> (4.8 : 1) and <b>#0E7F84</b> (4.8 : 1); the observed values stay for large display use and brand marks. Secondary grey is set at #666666 (5.7 : 1) instead of the paler observed grey. Disabled labels keep grey/400 (#9A9A9A, 2.6 : 1) as an intentional exemption; hero copy sits on a 55% scrim (observed ≈ 40%) so white text clears 4.5 : 1 over mid-tone photography.</p>
+    </div>
+    <div class="card" style="background: #FAFAFA">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Not reproduced</h3><span class="tag pro">Proposed</span></div>
+      <p>Savings streak, QR wallet, gift sharing, monthly reset and subscription messaging are Urban Point features outside LastTable's scope. Their <i>styling</i> (teal tick circles, pink status chip, outline CTA) is kept as component treatments where LastTable has an equivalent.</p>
+    </div>
+    <div class="card" style="background: #FAFAFA">
+      <div style="display: flex; justify-content: space-between; align-items: center"><h3>Source status</h3><span class="tag obs">Observed</span></div>
+      <p>The LastTable Figma file could not be inspected from this session (Figma connector not enabled here). Screen selection follows the brief: Discover, Listing, Details, Saved/Profile. Reconcile against the file before transfer.</p>
+    </div>
+  </div>
+</div>
+
+</div><div class="gap"></div><div id="pg2" class="pg" data-name="02 Foundations">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#ffffff}
+a{color:#0E7F84}a:hover{color:#0B7378}
+.sec{display:flex;flex-direction:column;gap:16px}
+.sec h2{margin:0;font-size:20px;font-weight:800;color:#1C1C1C}
+.sec p.lead{margin:0;font-size:13px;color:#666666;line-height:1.5}
+.swatch{display:flex;flex-direction:column;gap:8px}
+.swatch .chip{height:64px;border-radius:12px;border:1px solid rgba(0,0,0,.06)}
+.swatch .n{font-size:12px;font-weight:700;color:#1C1C1C}
+.swatch .v{font-size:11px;color:#666666;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.row{display:grid;grid-template-columns:150px 1fr 170px;gap:16px;align-items:baseline;padding:10px 0;border-bottom:1px solid #EEEEEE}
+.row>div:nth-child(2){white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .k{font-size:12px;font-weight:700;color:#1C1C1C}
+.row .spec{font-size:11px;color:#666666;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;text-align:right}
+.geo{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.geo .n{font-size:12px;font-weight:700;color:#1C1C1C}
+.geo .v{font-size:11px;color:#666666;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.sp{background:#E3111B;border-radius:2px;height:12px}
+</style>
+
+<div style="width: 1280px; height: 1600px; box-sizing: border-box; padding: 48px 56px; display: flex; flex-direction: column; gap: 32px; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #1C1C1C">
+  <div style="display: flex; flex-direction: column; gap: 6px">
+    <div style="font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #E3111B">02 · LastTable</div>
+    <h1 style="margin: 0; font-size: 30px; font-weight: 800; letter-spacing: -.01em">Foundations — light mode</h1>
+    <p style="margin: 0; font-size: 14px; color: #666666; line-height: 1.5; max-width: 820px">Primitive tokens derived from the reference, then semantic aliases the components bind to. Frame size 390 × 844 (iOS) kept from the LastTable file; web screens use a 1280 max-width container.</p>
+  </div>
+
+  <div class="sec">
+    <h2>Colour primitives</h2>
+    <div style="display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 14px">
+      <div class="swatch"><div class="chip" style="background: #FB1D26"></div><div class="n">red/brand</div><div class="v">#FB1D26 · observed</div></div>
+      <div class="swatch"><div class="chip" style="background: #E3111B"></div><div class="n">red/600</div><div class="v">#E3111B · proposed</div></div>
+      <div class="swatch"><div class="chip" style="background: #C90E17"></div><div class="n">red/700</div><div class="v">#C90E17 · pressed</div></div>
+      <div class="swatch"><div class="chip" style="background: #FDE8E9"></div><div class="n">red/50</div><div class="v">#FDE8E9 · tint</div></div>
+      <div class="swatch"><div class="chip" style="background: #139095"></div><div class="n">teal/brand</div><div class="v">#139095 · observed</div></div>
+      <div class="swatch"><div class="chip" style="background: #0E7F84"></div><div class="n">teal/600</div><div class="v">#0E7F84 · proposed</div></div>
+      <div class="swatch"><div class="chip" style="background: #0B7378"></div><div class="n">teal/700</div><div class="v">#0B7378 · pressed</div></div>
+      <div class="swatch"><div class="chip" style="background: #E3F6F4"></div><div class="n">teal/50</div><div class="v">#E3F6F4 · tint</div></div>
+      <div class="swatch"><div class="chip" style="background: #1C1C1C"></div><div class="n">grey/900</div><div class="v">#1C1C1C</div></div>
+      <div class="swatch"><div class="chip" style="background: #666666"></div><div class="n">grey/600</div><div class="v">#666666</div></div>
+      <div class="swatch"><div class="chip" style="background: #9A9A9A"></div><div class="n">grey/400</div><div class="v">#9A9A9A · decorative only</div></div>
+      <div class="swatch"><div class="chip" style="background: #E6E6E6"></div><div class="n">grey/200</div><div class="v">#E6E6E6</div></div>
+      <div class="swatch"><div class="chip" style="background: #F5F5F5"></div><div class="n">grey/100</div><div class="v">#F5F5F5</div></div>
+      <div class="swatch"><div class="chip" style="background: #FAFAFA"></div><div class="n">grey/50</div><div class="v">#FAFAFA</div></div>
+      <div class="swatch"><div class="chip" style="background: #FFFFFF"></div><div class="n">white</div><div class="v">#FFFFFF</div></div>
+      <div class="swatch"><div class="chip" style="background: #F2B01E"></div><div class="n">amber/500</div><div class="v">#F2B01E · star only</div></div>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px">
+    <div class="sec">
+      <h2>Semantic aliases</h2>
+      <div style="display: flex; flex-direction: column">
+        <div class="row"><div class="k">bg/canvas</div><div style="height: 14px; border-radius: 4px; background: #FFFFFF; border: 1px solid #E6E6E6"></div><div class="spec">white</div></div>
+        <div class="row"><div class="k">bg/subtle</div><div style="height: 14px; border-radius: 4px; background: #F5F5F5"></div><div class="spec">grey/100</div></div>
+        <div class="row"><div class="k">bg/tint-teal</div><div style="height: 14px; border-radius: 4px; background: #E3F6F4"></div><div class="spec">teal/50</div></div>
+        <div class="row"><div class="k">bg/tint-red</div><div style="height: 14px; border-radius: 4px; background: #FDE8E9"></div><div class="spec">red/50</div></div>
+        <div class="row"><div class="k">text/primary</div><div style="height: 14px; border-radius: 4px; background: #1C1C1C"></div><div class="spec">grey/900</div></div>
+        <div class="row"><div class="k">text/secondary</div><div style="height: 14px; border-radius: 4px; background: #666666"></div><div class="spec">grey/600</div></div>
+        <div class="row"><div class="k">text/on-primary</div><div style="height: 14px; border-radius: 4px; background: #FFFFFF; border: 1px solid #E6E6E6"></div><div class="spec">white</div></div>
+        <div class="row"><div class="k">border/default</div><div style="height: 14px; border-radius: 4px; background: #E6E6E6"></div><div class="spec">grey/200</div></div>
+        <div class="row"><div class="k">border/subtle</div><div style="height: 14px; border-radius: 4px; background: #EEEEEE"></div><div class="spec">#EEEEEE</div></div>
+        <div class="row"><div class="k">action/primary</div><div style="height: 14px; border-radius: 4px; background: #E3111B"></div><div class="spec">red/600 · pressed red/700</div></div>
+        <div class="row"><div class="k">accent/utility</div><div style="height: 14px; border-radius: 4px; background: #0E7F84"></div><div class="spec">teal/600 · pressed teal/700</div></div>
+        <div class="row"><div class="k">selection/nav-active</div><div style="height: 14px; border-radius: 4px; background: #E3111B"></div><div class="spec">red/600</div></div>
+        <div class="row"><div class="k">selection/chip-active</div><div style="height: 14px; border-radius: 4px; background: #0E7F84"></div><div class="spec">teal/600 · text white</div></div>
+        <div class="row"><div class="k">rating/star</div><div style="height: 14px; border-radius: 4px; background: #F2B01E"></div><div class="spec">amber/500</div></div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <h2>Typography</h2>
+      <p class="lead"><b>Plus Jakarta Sans</b> (Google Fonts) substitutes for the reference's rounded geometric face — closest match on double-storey a, round dots and stroke contrast. All sizes are the reference's mobile scale, not its advertising scale. Letter-spacing −0.01em on 20 px and above.</p>
+      <div style="display: flex; flex-direction: column">
+        <div class="row"><div class="k">display/greeting</div><div style="font-size: 26px; font-weight: 700; line-height: 32px">Good evening, Basel</div><div class="spec">26 / 32 · 700</div></div>
+        <div class="row"><div class="k">title/screen</div><div style="font-size: 24px; font-weight: 700; line-height: 30px">Restaurants nearby</div><div class="spec">24 / 30 · 700</div></div>
+        <div class="row"><div class="k">title/section</div><div style="font-size: 18px; font-weight: 700; line-height: 24px">Tonight's tables</div><div class="spec">18 / 24 · 700</div></div>
+        <div class="row"><div class="k">title/card</div><div style="font-size: 16px; font-weight: 700; line-height: 22px">Etto — Merrion Row</div><div class="spec">16 / 22 · 700</div></div>
+        <div class="row"><div class="k">body/default</div><div style="font-size: 14px; font-weight: 500; line-height: 20px">Seasonal Italian, walk-ins after 9 pm.</div><div class="spec">14 / 20 · 500</div></div>
+        <div class="row"><div class="k">body/meta</div><div style="font-size: 13px; font-weight: 500; line-height: 18px; color: #666666">1.2 km · 4.6 (813) · €€</div><div class="spec">13 / 18 · 500 · secondary</div></div>
+        <div class="row"><div class="k">label/button</div><div style="font-size: 15px; font-weight: 700; line-height: 20px">Book this table</div><div class="spec">15 / 20 · 700</div></div>
+        <div class="row"><div class="k">label/chip</div><div style="font-size: 14px; font-weight: 600; line-height: 18px">Nearby</div><div class="spec">14 / 18 · 600</div></div>
+        <div class="row"><div class="k">label/nav</div><div style="font-size: 12px; font-weight: 600; line-height: 14px">Explore</div><div class="spec">12 / 14 · 600</div></div>
+        <div class="row"><div class="k">label/caps</div><div style="font-size: 12px; font-weight: 600; line-height: 16px; letter-spacing: .02em">SAVE <span style="color: #E3111B">€18</span></div><div class="spec">12 / 16 · 600 · +0.02em</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>Geometry</h2>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <div style="font-size: 13px; font-weight: 700; color: #666666">Spacing scale</div>
+        <div class="geo"><div class="sp" style="width: 4px"></div><div class="v">space/1 · 4</div></div>
+        <div class="geo"><div class="sp" style="width: 8px"></div><div class="v">space/2 · 8</div></div>
+        <div class="geo"><div class="sp" style="width: 12px"></div><div class="v">space/3 · 12 · tile gap</div></div>
+        <div class="geo"><div class="sp" style="width: 16px"></div><div class="v">space/4 · 16 · row padding</div></div>
+        <div class="geo"><div class="sp" style="width: 20px"></div><div class="v">space/5 · 20 · screen gutter</div></div>
+        <div class="geo"><div class="sp" style="width: 24px"></div><div class="v">space/6 · 24 · section gap</div></div>
+        <div class="geo"><div class="sp" style="width: 32px"></div><div class="v">space/8 · 32</div></div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <div style="font-size: 13px; font-weight: 700; color: #666666">Radii</div>
+        <div style="display: flex; gap: 10px; align-items: flex-end; flex-wrap: nowrap">
+          <div class="geo"><div style="width: 48px; height: 48px; background: #F5F5F5; border-radius: 8px"></div><div class="v">r/sm 8</div></div>
+          <div class="geo"><div style="width: 48px; height: 48px; background: #F5F5F5; border-radius: 12px"></div><div class="v">r/md 12</div></div>
+          <div class="geo"><div style="width: 48px; height: 48px; background: #F5F5F5; border-radius: 16px"></div><div class="v">r/lg 16</div></div>
+          <div class="geo"><div style="width: 48px; height: 48px; background: #F5F5F5; border-radius: 24px"></div><div class="v">r/xl 24</div></div>
+          <div class="geo"><div style="width: 48px; height: 48px; background: #F5F5F5; border-radius: 999px"></div><div class="v">r/full</div></div>
+        </div>
+        <div class="v" style="line-height: 1.6">tile 16 · card 20 · banner 24 · button 12 · chip/control full · input 12</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <div style="font-size: 13px; font-weight: 700; color: #666666">Borders &amp; shadows</div>
+        <div class="geo"><div style="width: 160px; height: 44px; border: 1px solid #E6E6E6; border-radius: 12px; background: #fff"></div><div class="v">border/1 · 1px grey/200</div></div>
+        <div class="geo"><div style="width: 160px; height: 44px; border: 1.5px solid #E3111B; border-radius: 12px; background: #fff"></div><div class="v">border/accent · 1.5px red/600</div></div>
+        <div class="geo"><div style="width: 160px; height: 44px; border-radius: 12px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.06)"></div><div class="v">shadow/card · 0 2 10 · 6%</div></div>
+        <div class="geo"><div style="width: 160px; height: 44px; border-radius: 12px; background: #fff; box-shadow: 0 6px 20px rgba(0,0,0,.12)"></div><div class="v">shadow/float · 0 6 20 · 12%</div></div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <div style="font-size: 13px; font-weight: 700; color: #666666">Icon sizes &amp; strokes</div>
+        <div style="display: flex; gap: 16px; align-items: flex-end; color: #0E7F84">
+          <div class="geo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg><div class="v">16 · meta</div></div>
+          <div class="geo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg><div class="v">20 · chip</div></div>
+          <div class="geo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg><div class="v">24 · nav/utility</div></div>
+          <div class="geo"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg><div class="v">28 · detail</div></div>
+        </div>
+        <div class="v" style="line-height: 1.6">Optical stroke: 14–16 px → 2.0–2.4 (chevrons, close); 18–24 px → 1.8; 28 px → 1.6. Round caps and joins. Circular control 44 px; logo circle 80 / 72 / 56 (web detail header 96); cuisine circle 76. Touch target ≥ 44.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><div class="gap"></div><div id="pg3" class="pg" data-name="03 Components">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#ffffff}
+a{color:#0E7F84}a:hover{color:#0B7378}
+.spec{display:flex;flex-direction:column;gap:14px;padding:20px;border:1px solid #EEEEEE;border-radius:16px;background:#fff}
+.spec h3{margin:0;font-size:14px;font-weight:800;color:#1C1C1C}
+.spec .d{font-size:11px;color:#666666;line-height:1.5}
+.lbl{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#666666}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 20px;border-radius:12px;font:700 15px/20px 'Plus Jakarta Sans',system-ui,sans-serif;border:0;cursor:pointer;box-sizing:border-box}
+.btn-p{background:#E3111B;color:#fff}.btn-p.pressed{background:#C90E17}.btn-p.dis{background:#F5F5F5;color:#9A9A9A}
+.btn-s{background:#fff;color:#E3111B;border:1.5px solid #E3111B}.btn-s.pressed{background:#FDE8E9}.btn-s.dis{border-color:#E6E6E6;color:#9A9A9A}
+.btn-t{background:#0E7F84;color:#fff}
+.btn-sm{height:36px;padding:0 14px;font-size:13px;border-radius:999px}
+.ico{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;border:0;background:#F5F5F5;color:#1C1C1C;cursor:pointer}
+.ico.teal{color:#0E7F84}.ico.white{background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.12)}.ico.red{background:#E3111B;color:#fff}.ico.sm{width:32px;height:32px}
+.rw{position:relative}
+.heart{position:absolute;right:-10px;top:6px;width:44px;height:44px;border:0;background:transparent;padding:0;display:inline-flex;align-items:center;justify-content:center;color:#0E7F84;cursor:pointer}
+.ow{position:relative}
+.ob{position:absolute;right:8px;width:44px;height:44px;border:0;background:transparent;padding:0;display:inline-flex;align-items:center;justify-content:center;color:#0E7F84;cursor:pointer}
+.tile.s3{font-size:15px;line-height:20px;padding:14px}.tile.s3 .obj{width:64px;height:64px;right:0;bottom:0}
+.focus{outline:2px solid #0E7F84;outline-offset:2px}
+.search{display:flex;align-items:center;gap:10px;height:48px;padding:0 16px;border-radius:12px;background:#F5F5F5;color:#666666;font:500 14px 'Plus Jakarta Sans',system-ui,sans-serif;box-sizing:border-box}
+.search input{border:0;background:transparent;font:inherit;color:#1C1C1C;flex:1;min-width:0;outline:none}
+.search.focus{background:#fff;border:1.5px solid #0E7F84;outline:0}
+.chip{display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 16px;border-radius:999px;background:#F5F5F5;color:#1C1C1C;font:600 14px 'Plus Jakarta Sans',system-ui,sans-serif;border:0;cursor:pointer;white-space:nowrap}
+.chip.sel{background:#0E7F84;color:#fff}.chip.pressed{background:#E6E6E6}.chip.dis{color:#9A9A9A}
+.tile{position:relative;overflow:hidden;border-radius:16px;background:#F5F5F5;padding:16px;box-sizing:border-box;display:flex;flex-direction:column;text-decoration:none;color:#1C1C1C;font:700 16px/22px 'Plus Jakarta Sans',system-ui,sans-serif}
+.tile .obj{position:absolute;right:8px;bottom:6px;width:76px;height:76px;border-radius:50%}
+.tile.sel{outline:2px solid #E3111B;outline-offset:-2px}
+.ph{background:#E9E4DD;color:#7A6F62;display:flex;align-items:center;justify-content:center;text-align:center;font:600 10px/1.3 'Plus Jakarta Sans',system-ui,sans-serif;overflow:hidden}
+.cuis{display:flex;flex-direction:column;align-items:center;gap:8px;width:84px;text-decoration:none;color:#1C1C1C;font:600 14px/18px 'Plus Jakarta Sans',system-ui,sans-serif;text-align:center}
+.cuis .ph{width:76px;height:76px;border-radius:50%}
+.cuis.sel .ph{box-shadow:0 0 0 3px #fff,0 0 0 5px #E3111B}
+.logo{width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:800 18px 'Plus Jakarta Sans',system-ui,sans-serif;color:#fff;flex:none;letter-spacing:-.02em}
+.logo.ring{background:#fff;color:#1C1C1C;border:1px solid #E6E6E6}
+.rrow{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid #EEEEEE;text-decoration:none;color:#1C1C1C;font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+.rrow .t{font-size:16px;font-weight:700;line-height:22px}
+.rrow .s{font-size:13px;color:#666666;line-height:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.meta{display:flex;align-items:center;gap:6px;font:500 13px/18px 'Plus Jakarta Sans',system-ui,sans-serif;color:#666666;flex-wrap:wrap}
+.meta .dot{width:3px;height:3px;border-radius:50%;background:#C8C8C8}
+.meta svg{flex:none}
+.link-r{color:#E3111B;font-weight:700;text-decoration:underline;text-underline-offset:3px;font-size:14px;display:inline-flex;align-items:center;gap:6px}
+.ocard{position:relative;overflow:hidden;display:flex;gap:14px;padding:16px;border-radius:20px;border:1px solid #E6E6E6;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.06);font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1C1C1C;text-decoration:none;box-sizing:border-box}
+.ocard .notch{position:absolute;right:-9px;width:18px;height:18px;border-radius:50%;background:#fff;border:1px solid #E6E6E6}
+.rcard{display:flex;flex-direction:column;border-radius:20px;border:1px solid #E6E6E6;background:#fff;overflow:hidden;text-decoration:none;color:#1C1C1C;font-family:'Plus Jakarta Sans',system-ui,sans-serif;box-sizing:border-box}
+.sect{display:flex;justify-content:space-between;align-items:center;font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+.sect h2{margin:0;font-size:18px;font-weight:700;line-height:24px;color:#1C1C1C}
+.sect a{display:inline-flex;align-items:center;gap:8px;color:#E3111B;font:700 14px 'Plus Jakarta Sans',system-ui,sans-serif;text-decoration:none}
+.nav{display:flex;justify-content:space-around;align-items:flex-start;padding:10px 8px 0;border-top:1px solid #EEEEEE;background:#fff;height:84px;box-sizing:border-box;font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+.nav a{display:flex;flex-direction:column;align-items:center;gap:4px;width:64px;text-decoration:none;color:#1C1C1C;font:600 12px/14px 'Plus Jakarta Sans',system-ui,sans-serif;padding:4px 0}
+.nav a.on{color:#E3111B}
+.prow{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid #EEEEEE;text-decoration:none;color:#1C1C1C;font:600 15px/20px 'Plus Jakarta Sans',system-ui,sans-serif}
+.prow .pi{width:40px;height:40px;border-radius:12px;background:#E3F6F4;color:#0E7F84;display:flex;align-items:center;justify-content:center;flex:none}
+.stars{display:inline-flex;gap:2px;color:#F2B01E}
+.pill{display:inline-flex;align-items:center;height:28px;padding:0 12px;border-radius:999px;font:700 12px 'Plus Jakarta Sans',system-ui,sans-serif}
+.pill.red{background:#FDE8E9;color:#C90E17}.pill.teal{background:#E3F6F4;color:#0B7378}
+</style>
+
+<div style="width: 1280px; height: 1880px; box-sizing: border-box; padding: 48px 56px; display: flex; flex-direction: column; gap: 24px; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #1C1C1C">
+  <div style="display: flex; flex-direction: column; gap: 6px">
+    <div style="font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #E3111B">03 · LastTable</div>
+    <h1 style="margin: 0; font-size: 30px; font-weight: 800; letter-spacing: -.01em">Component library</h1>
+    <p style="margin: 0; font-size: 14px; color: #666666; line-height: 1.5; max-width: 820px">Specimens with their visual states. Properties: label text, image slot, icon swap, optional trailing element. Only families used by the four restyled screens are included.</p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+    <div class="spec">
+      <h3>Buttons</h3>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div class="lbl">Primary · default / pressed / disabled</div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap"><button class="btn btn-p">Book this table</button><button class="btn btn-p pressed">Book this table</button><button class="btn btn-p dis">Book this table</button></div>
+        <div class="lbl">Secondary (outline) · default / pressed / focused</div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap"><button class="btn btn-s">See all offers</button><button class="btn btn-s pressed">See all offers</button><button class="btn btn-s focus">See all offers</button></div>
+        <div class="lbl">Small pill · primary / teal</div>
+        <div style="display: flex; gap: 10px"><button class="btn btn-p btn-sm">View all offers</button><button class="btn btn-t btn-sm">Apply</button></div>
+      </div>
+      <div class="d">48 px tall, 12 px radius, 15/700 label. Pills are 36 px, fully round. Disabled uses grey/100 fill with grey/400 text.</div>
+    </div>
+
+    <div class="spec">
+      <h3>Icon buttons &amp; floating controls</h3>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div class="lbl">Grey circle (back, share) · teal utility · focused</div>
+        <div style="display: flex; gap: 10px">
+          <button class="ico" aria-label="Back"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m7-7-7 7 7 7"/></svg></button>
+          <button class="ico teal" aria-label="Save"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></button>
+          <button class="ico teal" aria-label="Saved"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></button>
+          <button class="ico focus" aria-label="Share"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M12 15V3m-4 4 4-4 4 4"/></svg></button>
+        </div>
+        <div class="lbl">Floating over photography · white with shadow / red arrow</div>
+        <div style="display: flex; gap: 10px; padding: 12px; border-radius: 12px; background: #E9E4DD">
+          <button class="ico white" aria-label="Back"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m7-7-7 7 7 7"/></svg></button>
+          <button class="ico white teal" aria-label="Save"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></button>
+          <button class="ico red sm" aria-label="View all"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></button>
+        </div>
+      </div>
+      <div class="d">44 px circles; icon swap via property. Red 32 px arrow pairs with the "View all" section link.</div>
+    </div>
+
+    <div class="spec">
+      <h3>Search field</h3>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div class="lbl">Default</div>
+        <label class="search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.3-4.3"/></svg><input type="search" placeholder="Restaurant, cuisine or area" aria-label="Search"></label>
+        <div class="lbl">Focused</div>
+        <label class="search focus"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E7F84" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.3-4.3"/></svg><input type="search" value="Ramen" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#666666" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></label>
+        <div class="lbl">With location trailing</div>
+        <label class="search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.3-4.3"/></svg><input type="search" placeholder="Search LastTable" aria-label="Search"><span style="display: inline-flex; align-items: center; gap: 4px; color: #0E7F84; font-weight: 600; font-size: 13px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>Dublin 2</span></label>
+      </div>
+      <div class="d">48 px, grey/100 fill, 12 px radius; focus turns white with 1.5 px teal border.</div>
+    </div>
+
+    <div class="spec">
+      <h3>Filter &amp; category chips</h3>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div class="lbl">Unselected · with icon + chevron · selected (teal) · pressed · disabled</div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap">
+          <button class="chip">New</button>
+          <button class="chip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>Nearby<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <button class="chip sel"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.8 5.6L19 9l-4.6 3.4L16 18l-4-3-4 3 1.6-5.6L5 9l5.2-1.4Z"/></svg>Popular<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+          <button class="chip pressed">Tonight</button>
+          <button class="chip dis">Open now</button>
+        </div>
+      </div>
+      <div class="d">40 px, full radius, 14/600. Selected = teal/600 fill, white text, trailing clear icon.</div>
+    </div>
+
+    <div class="spec" style="grid-column: span 2">
+      <h3>Category tiles &amp; cuisine circles</h3>
+      <div style="display: grid; grid-template-columns: 165px 165px 105px 1fr; gap: 16px; align-items: start">
+        <a class="tile" href="#tiles" style="height: 115px">Deals<br>tonight<div class="ph obj">[PHOTO: plated dish cut-out]</div></a>
+        <a class="tile sel" href="#tiles" style="height: 115px">Walk-in<br>tables<div class="ph obj">[PHOTO: cut-out]</div></a>
+        <a class="tile s3" href="#tiles" style="height: 115px">Date<br>night<div class="ph obj">[PHOTO: wine]</div></a>
+        <div style="display: flex; gap: 12px; overflow: hidden">
+          <a class="cuis" href="#c"><div class="ph">[PHOTO: pizza]</div>Pizza &amp; Pasta</a>
+          <a class="cuis sel" href="#c"><div class="ph">[PHOTO: ramen]</div>Asian</a>
+          <a class="cuis" href="#c"><div class="ph">[PHOTO: steak]</div>Steak</a>
+          <a class="cuis" href="#c"><div class="ph">[PHOTO: brunch]</div>Brunch</a>
+        </div>
+      </div>
+      <div class="d">Tiles: grey/100, 16 px radius, 16/700 label top-left, 76 px isolated object bottom-right (image slot property). 3-up variant: 15/20 label, 64 px object. Selected tile gets a 2 px inset red outline. Cuisine items: 76 px circular photo, 84 px column, 2-line label; selected = red ring.</div>
+    </div>
+
+    <div class="spec">
+      <h3>Section header · metadata · rating</h3>
+      <div style="display: flex; flex-direction: column; gap: 14px">
+        <div class="sect"><h2>Tonight's tables</h2><a href="#all">View all<span class="ico red sm"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></span></a></div>
+        <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 22s-7-6-7-12a7 7 0 0 1 14 0c0 6-7 12-7 12Zm0-9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg>1.2 km<span class="dot"></span><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg>4.6 (813)<span class="dot"></span>€€<span class="dot"></span><span style="color: #0E7F84; font-weight: 600">Open now</span></div>
+        <div style="display: flex; align-items: center; gap: 8px"><span class="stars" aria-label="4.5 out of 5"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6E6E6" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg></span><span style="font-size: 14px; font-weight: 700">4.5</span><span style="font-size: 13px; color: #666666">813 reviews</span></div>
+        <div style="display: flex; gap: 8px"><span class="pill red">−30% tonight</span><span class="pill teal">Walk-in</span></div>
+        <a class="link-r" href="#offers">3 tables available<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+      </div>
+      <div class="d">Meta row: 13/500 grey with 14 px filled glyphs and 3 px dot separators. Red underlined expander mirrors the reference's "Offers available".</div>
+    </div>
+
+    <div class="spec" style="grid-column: span 2">
+      <h3>Restaurant list row</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px">
+        <div style="display: flex; flex-direction: column">
+          <div class="rw"><a class="rrow" href="#r1">
+            <div class="logo" style="background: #1B6B4A">ON</div>
+            <div style="display: flex; flex-direction: column; gap: 4px; min-width: 0; flex: 1">
+              <div style="padding-right: 36px"><div class="t">Osteria Nove — Dame Lane</div></div>
+              <div class="s">12 Dame Lane, Dublin 2 · Italian</div>
+              <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 22s-7-6-7-12a7 7 0 0 1 14 0c0 6-7 12-7 12Zm0-9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg>0.8 km<span class="dot"></span><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg>4.6 (813)<span class="dot"></span>€€</div>
+              <span class="link-r">3 tables tonight<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+            </div>
+          </a><button class="heart" type="button" aria-label="Save restaurant" aria-pressed="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></button></div>
+          <div class="lbl" style="padding-top: 8px">Default · teal outlined heart (44 px target)</div>
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <div class="rw"><a class="rrow" href="#r2" style="background: #FAFAFA; margin: 0 -8px; padding-left: 8px; padding-right: 8px; border-radius: 12px; border-bottom: 0">
+            <div class="logo ring">KR</div>
+            <div style="display: flex; flex-direction: column; gap: 4px; min-width: 0; flex: 1">
+              <div style="padding-right: 36px"><div class="t">Kōyō Ramen — Capel St</div></div>
+              <div class="s">41 Capel Street, Dublin 1 · Japanese</div>
+              <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 22s-7-6-7-12a7 7 0 0 1 14 0c0 6-7 12-7 12Zm0-9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg>1.4 km<span class="dot"></span><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg>4.8 (402)<span class="dot"></span>€</div>
+              <span style="font-size: 14px; font-weight: 600; color: #666666">Fully booked tonight</span>
+            </div>
+          </a><button class="heart" type="button" aria-label="Save restaurant" aria-pressed="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></button></div>
+          <div class="lbl" style="padding-top: 8px">Pressed · saved heart · no availability</div>
+        </div>
+      </div>
+      <div class="d">80 px logo (brand fill or white ring), 16 px gap, title 16/700 wraps to two lines, address 13 grey truncated, meta row, red offers expander. Heart is a separate 44 px toggle button beside the row link. Hairline #EEEEEE separator; pressed = grey/50 wash.</div>
+    </div>
+
+    <div class="spec">
+      <h3>Offer card (ticket edge)</h3>
+      <div class="ow">
+      <a class="ocard" href="#o1">
+        <div class="notch" style="top: calc(50% - 22px)"></div><div class="notch" style="bottom: calc(50% - 22px)"></div>
+        <div class="logo" style="width: 72px; height: 72px; background: #B8382B; font-size: 16px">SY</div>
+        <div style="display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; padding-right: 36px">
+          <div style="font-size: 13px; color: #666666; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">The Salt Yard — Smithfield</div>
+          <div style="font-size: 16px; font-weight: 700; line-height: 22px">30% off food for 2, tonight 9:15 pm</div>
+          <div style="font-size: 12px; font-weight: 600; letter-spacing: .02em; padding-top: 4px">SAVE <span style="color: #E3111B">€24</span></div>
+        </div>
+      </a>
+      <button class="ob" type="button" style="top: 6px" aria-label="Save offer" aria-pressed="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></button>
+      <button class="ob" type="button" style="bottom: 6px" aria-label="Add to calendar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3m8-3v3M3 9h18M5 5h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg></button>
+      </div>
+      <div class="d">20 px radius, 1 px border, soft shadow, two 18 px notches centred on the right edge between the heart and the trailing utility button (property: trailing icon, default calendar). Both buttons are 44 px targets beside the card link. 72 px logo.</div>
+    </div>
+
+    <div class="spec">
+      <h3>Restaurant / promo card</h3>
+      <a class="rcard" href="#rc">
+        <div class="ph" style="height: 120px">[PHOTO: dining room]</div>
+        <div style="display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 16px">
+          <div style="display: flex; justify-content: space-between; align-items: center"><div style="font-size: 16px; font-weight: 700">Marrow &amp; Co</div><span class="pill red">−25%</span></div>
+          <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg>4.7<span class="dot"></span>Modern Irish<span class="dot"></span>2.1 km</div>
+        </div>
+      </a>
+      <div class="d">Photo top (16:9 slot), 20 px radius, border, title + red pill, meta row.</div>
+    </div>
+
+    <div class="spec">
+      <h3>Profile / settings row</h3>
+      <div style="display: flex; flex-direction: column">
+        <a class="prow" href="#p1"><span class="pi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg></span><span style="flex: 1">Personal details</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9A9A9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+        <a class="prow" href="#p2"><span class="pi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 8 3 8H3s3-1 3-8M10 21h4"/></svg></span><span style="flex: 1">Notifications</span><span style="width: 44px; height: 26px; border-radius: 999px; background: #0E7F84; position: relative"><span style="position: absolute; right: 3px; top: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff"></span></span></a>
+        <a class="prow" href="#p3" style="border-bottom: 0"><span class="pi" style="background: #FDE8E9; color: #C90E17"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4m7 14 5-5-5-5m5 5H9"/></svg></span><span style="flex: 1; color: #C90E17">Log out</span></a>
+      </div>
+      <div class="d">40 px tinted icon square (12 px radius), 15/600 label, chevron or toggle trailing. Destructive rows use red tint.</div>
+    </div>
+
+    <div class="spec" style="grid-column: span 3">
+      <h3>Bottom navigation</h3>
+      <div style="display: grid; grid-template-columns: 390px 1fr; gap: 24px; align-items: start">
+        <nav class="nav" style="outline: 12px solid #F5F5F5" aria-label="Main">
+          <a class="on" href="#explore" aria-current="page"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h14M5 10v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7M5 10l1.5-5h11L19 10"/><path d="M9 19v-5h6v5"/></svg>Explore</a>
+          <a href="#saved"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg>Saved</a>
+          <a href="#map"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Zm0 0v14m6-12v14"/></svg>Map</a>
+          <a href="#search"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.3-4.3"/></svg>Search</a>
+          <a href="#profile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>Profile</a>
+        </nav>
+        <div class="d" style="font-size: 12px">White bar, hairline top border, no shadow. Five 64 px items: 24 px outlined icon, 4 px gap, 12/600 label. Selected = red/600 icon + label (icon stays outlined, as observed). Item component properties: icon swap, label, selected boolean. Bar height 84 px including the 34 px home-indicator area.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><div class="gap"></div><div id="pg4" class="pg" data-name="05 Web Discover">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#ffffff}
+a{color:#0E7F84}a:hover{color:#0B7378}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px;box-sizing:border-box}
+.topnav a.nl{color:#1C1C1C;text-decoration:none;font:600 14px 'Plus Jakarta Sans',system-ui,sans-serif;padding:8px 0}
+.topnav a.nl.on{color:#E3111B}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 18px;border-radius:12px;font:700 14px/20px 'Plus Jakarta Sans',system-ui,sans-serif;border:0;cursor:pointer;box-sizing:border-box;text-decoration:none;white-space:nowrap}
+.btn-p{background:#E3111B;color:#fff}
+.btn-s{background:#fff;color:#E3111B;border:1.5px solid #E3111B}
+.ico{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:999px;border:0;background:#E3111B;color:#fff}
+.rw{position:relative;min-width:0}
+.heart{position:absolute;right:-10px;top:6px;width:44px;height:44px;border:0;background:transparent;padding:0;display:inline-flex;align-items:center;justify-content:center;color:#0E7F84;cursor:pointer}
+.ow{position:relative;min-width:0}
+.ob{position:absolute;right:8px;width:44px;height:44px;border:0;background:transparent;padding:0;display:inline-flex;align-items:center;justify-content:center;color:#0E7F84;cursor:pointer}
+.search{display:flex;align-items:center;gap:10px;height:44px;padding:0 16px;border-radius:12px;background:#F5F5F5;color:#666666;font:500 14px 'Plus Jakarta Sans',system-ui,sans-serif;box-sizing:border-box;flex:1 1 260px;min-width:0}
+.search input{border:0;background:transparent;font:inherit;color:#1C1C1C;flex:1;min-width:0;outline:none}
+.tile{position:relative;overflow:hidden;border-radius:16px;background:#F5F5F5;padding:16px;box-sizing:border-box;display:flex;flex-direction:column;text-decoration:none;color:#1C1C1C;font:700 16px/22px 'Plus Jakarta Sans',system-ui,sans-serif;height:115px}
+.tile .obj{position:absolute;right:8px;bottom:6px;width:76px;height:76px;border-radius:50%}
+.ph{background:#E9E4DD;color:#7A6F62;display:flex;align-items:center;justify-content:center;text-align:center;font:600 10px/1.3 'Plus Jakarta Sans',system-ui,sans-serif;overflow:hidden}
+.cuis{display:flex;flex-direction:column;align-items:center;gap:8px;width:84px;flex:none;text-decoration:none;color:#1C1C1C;font:600 14px/18px 'Plus Jakarta Sans',system-ui,sans-serif;text-align:center}
+.cuis .ph{width:76px;height:76px;border-radius:50%;flex:none}
+.cuis.sel .ph{box-shadow:0 0 0 3px #fff,0 0 0 5px #E3111B}
+.chip{display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 16px;border-radius:999px;background:#F5F5F5;color:#1C1C1C;font:600 14px 'Plus Jakarta Sans',system-ui,sans-serif;border:0;cursor:pointer;white-space:nowrap}
+.chip.sel{background:#0E7F84;color:#fff}
+.logo{border-radius:50%;display:flex;align-items:center;justify-content:center;font:800 16px 'Plus Jakarta Sans',system-ui,sans-serif;color:#fff;flex:none;letter-spacing:-.02em;width:72px;height:72px}
+.logo.ring{background:#fff;color:#1C1C1C;border:1px solid #E6E6E6}
+.ocard{position:relative;overflow:hidden;display:flex;gap:14px;padding:16px;border-radius:20px;border:1px solid #E6E6E6;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.06);color:#1C1C1C;text-decoration:none;box-sizing:border-box;min-width:0}
+.ocard .notch{position:absolute;right:-9px;width:18px;height:18px;border-radius:50%;background:#fff;border:1px solid #E6E6E6}
+.rrow{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid #EEEEEE;text-decoration:none;color:#1C1C1C;min-width:0}
+.rrow .t{font-size:16px;font-weight:700;line-height:22px}
+.rrow .s{font-size:13px;color:#666666;line-height:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.meta{display:flex;align-items:center;gap:6px;font:500 13px/18px 'Plus Jakarta Sans',system-ui,sans-serif;color:#666666;flex-wrap:wrap}
+.meta .dot{width:3px;height:3px;border-radius:50%;background:#C8C8C8}
+.link-r{color:#E3111B;font-weight:700;text-decoration:underline;text-underline-offset:3px;font-size:14px;display:inline-flex;align-items:center;gap:6px;padding-top:2px}
+.heart{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;color:#0E7F84;flex:none}
+.sect{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.sect h2{margin:0;font-size:22px;font-weight:700;line-height:28px;color:#1C1C1C;letter-spacing:-.01em}
+.sect a{display:inline-flex;align-items:center;gap:8px;color:#E3111B;font:700 14px 'Plus Jakarta Sans',system-ui,sans-serif;text-decoration:none}
+.foot a{color:#666666;text-decoration:none;font:500 13px 'Plus Jakarta Sans',system-ui,sans-serif}
+</style>
+
+<div style="display: flex; flex-direction: column; background: #ffffff; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #1C1C1C; min-height: 100vh">
+  <header class="topnav" style="border-bottom: 1px solid #EEEEEE; background: #fff">
+    <div class="wrap" style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; height: auto; min-height: 72px; padding-top: 12px; padding-bottom: 12px">
+      <a href="WebDiscover.dc.html" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #1C1C1C; flex: none">
+        <span style="width: 32px; height: 32px; border-radius: 10px; background: #E3111B; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px" aria-hidden="true">LT</span>
+        <span style="font-size: 20px; font-weight: 800; letter-spacing: -.02em">LastTable</span>
+      </a>
+      <label class="search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.3-4.3"/></svg><input type="search" placeholder="Restaurant, cuisine or area" aria-label="Search"><span style="display: inline-flex; align-items: center; gap: 4px; color: #0E7F84; font-weight: 600; font-size: 13px; white-space: nowrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>Dublin 2</span></label>
+      <nav style="display: flex; gap: 24px; align-items: center; flex-wrap: wrap" aria-label="Main">
+        <a class="nl on" href="WebDiscover.dc.html" aria-current="page">Explore</a>
+        <a class="nl" href="#saved">Saved</a>
+        <a class="nl" href="#map">Map</a>
+        <a class="nl" href="#help">Help</a>
+        <a class="btn btn-p" href="#signin" style="height: 40px">Sign in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" style="display: flex; flex-direction: column; gap: 40px; padding-top: 32px; padding-bottom: 56px; width: 100%">
+    <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; align-items: stretch">
+      <a href="WebDetails.dc.html" style="position: relative; display: flex; flex-direction: column; justify-content: center; gap: 10px; min-height: 300px; padding: 40px; border-radius: 24px; overflow: hidden; text-decoration: none; color: #fff; grid-column: 1 / -1; box-sizing: border-box">
+        <div class="ph" style="position: absolute; inset: 0; align-items: flex-start; justify-content: flex-end; padding: 12px; font-size: 12px; color: #5C5248">[PHOTO: restaurant terrace at dusk, full bleed 1140×300]</div>
+        <div style="position: absolute; inset: 0; background: rgba(20,20,20,.55)"></div>
+        <div style="position: relative; font-size: 40px; font-weight: 800; line-height: 44px; letter-spacing: -.02em; max-width: 520px">Late tables, lower prices</div>
+        <div style="position: relative; font-size: 16px; font-weight: 600; max-width: 520px">Up to 50% off food at Dublin restaurants after 9 pm. Tonight's tables refresh at 5 pm.</div>
+        <span class="btn" style="position: relative; align-self: flex-start; background: #fff; color: #E3111B; margin-top: 8px">View all offers</span>
+      </a>
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 16px">
+      <div class="sect"><h2>Browse</h2></div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px">
+        <a class="tile" href="WebDetails.dc.html">Deals<br>tonight<div class="ph obj">[PHOTO: pasta cut-out]</div></a>
+        <a class="tile" href="WebDetails.dc.html">Walk-in<br>tables<div class="ph obj">[PHOTO: cocktail]</div></a>
+        <a class="tile" href="WebDetails.dc.html">Brunch<div class="ph obj">[PHOTO: eggs]</div></a>
+        <a class="tile" href="WebDetails.dc.html">Date<br>night<div class="ph obj">[PHOTO: wine]</div></a>
+        <a class="tile" href="WebDetails.dc.html">Groups<div class="ph obj">[PHOTO: sharing plate]</div></a>
+      </div>
+      <div style="display: flex; gap: 16px; overflow-x: auto; padding: 8px 0 4px">
+        <a class="cuis" href="#c1"><div class="ph">[PHOTO: pizza]</div>Pizza &amp; Pasta</a>
+        <a class="cuis sel" href="#c2"><div class="ph">[PHOTO: brunch]</div>Café &amp; Brunch</a>
+        <a class="cuis" href="#c3"><div class="ph">[PHOTO: ramen]</div>Asian</a>
+        <a class="cuis" href="#c4"><div class="ph">[PHOTO: steak]</div>Steak &amp; Grill</a>
+        <a class="cuis" href="#c5"><div class="ph">[PHOTO: curry]</div>Indian</a>
+        <a class="cuis" href="#c6"><div class="ph">[PHOTO: tacos]</div>Mexican</a>
+        <a class="cuis" href="#c7"><div class="ph">[PHOTO: mezze]</div>Middle Eastern</a>
+        <a class="cuis" href="#c8"><div class="ph">[PHOTO: seafood]</div>Seafood</a>
+      </div>
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 16px">
+      <div class="sect"><h2>Tonight's tables</h2><a href="#all">View all<span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></span></a></div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px">
+        <div class="ow"><a class="ocard" href="WebDetails.dc.html"><div class="notch" style="top: calc(50% - 22px)"></div><div class="notch" style="bottom: calc(50% - 22px)"></div><div class="logo" style="background: #1B6B4A">ON</div><div style="display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; padding-right: 36px"><div style="font-size: 13px; color: #666666; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Osteria Nove — Dame Lane</div><div style="font-size: 16px; font-weight: 700; line-height: 22px">30% off food for 2, 9:15 pm</div><div style="font-size: 12px; font-weight: 600; letter-spacing: .02em; padding-top: 4px">SAVE <span style="color: #E3111B">€24</span></div></div></a><button class="ob" type="button" style="top: 6px" aria-label="Save offer" aria-pressed="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></button><button class="ob" type="button" style="bottom: 6px" aria-label="Add to calendar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3m8-3v3M3 9h18M5 5h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg></button></div>
+        <div class="ow"><a class="ocard" href="WebDetails.dc.html"><div class="notch" style="top: calc(50% - 22px)"></div><div class="notch" style="bottom: calc(50% - 22px)"></div><div class="logo" style="background: #B8382B">SY</div><div style="display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; padding-right: 36px"><div style="font-size: 13px; color: #666666; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">The Salt Yard — Smithfield</div><div style="font-size: 16px; font-weight: 700; line-height: 22px">Set menu −40%, 9:45 pm</div><div style="font-size: 12px; font-weight: 600; letter-spacing: .02em; padding-top: 4px">SAVE <span style="color: #E3111B">€36</span></div></div></a><button class="ob" type="button" style="top: 6px" aria-label="Save offer" aria-pressed="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></button><button class="ob" type="button" style="bottom: 6px" aria-label="Add to calendar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3m8-3v3M3 9h18M5 5h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg></button></div>
+        <div class="ow"><a class="ocard" href="WebDetails.dc.html"><div class="notch" style="top: calc(50% - 22px)"></div><div class="notch" style="bottom: calc(50% - 22px)"></div><div class="logo ring">KR</div><div style="display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; padding-right: 36px"><div style="font-size: 13px; color: #666666; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Kōyō Ramen — Capel Street</div><div style="font-size: 16px; font-weight: 700; line-height: 22px">2 for 1 ramen, 10 pm</div><div style="font-size: 12px; font-weight: 600; letter-spacing: .02em; padding-top: 4px">SAVE <span style="color: #E3111B">€15</span></div></div></a><button class="ob" type="button" style="top: 6px" aria-label="Save offer" aria-pressed="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></button><button class="ob" type="button" style="bottom: 6px" aria-label="Add to calendar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3m8-3v3M3 9h18M5 5h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg></button></div>
+      </div>
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 16px">
+      <div class="sect" style="flex-wrap: wrap"><h2>Restaurants near you</h2><div style="display: flex; gap: 8px; flex-wrap: wrap"><button class="chip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>Nearby<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button><button class="chip">New</button><button class="chip sel"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.8 5.6L19 9l-4.6 3.4L16 18l-4-3-4 3 1.6-5.6L5 9l5.2-1.4Z"/></svg>Popular<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button><button class="chip">Open now</button></div></div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); column-gap: 48px">
+        <div class="rw"><a class="rrow" href="WebDetails.dc.html"><div class="logo" style="width: 80px; height: 80px; background: #1B6B4A">ON</div><div style="display: flex; flex-direction: column; gap: 4px; min-width: 0; flex: 1"><div style="padding-right: 36px"><div class="t">Osteria Nove — Dame Lane</div></div><div class="s">12 Dame Lane, Dublin 2 · Italian</div><div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 22s-7-6-7-12a7 7 0 0 1 14 0c0 6-7 12-7 12Zm0-9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg>0.8 km<span class="dot"></span><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg>4.6 (813)<span class="dot"></span>€€</div><span class="link-r">3 tables tonight<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></div></a><button class="heart" type="button" aria-label="Save restaurant" aria-pressed="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></button></div>
+        <div class="rw"><a class="rrow" href="WebDetails.dc.html"><div class="logo" style="width: 80px; height: 80px; background: #B8382B">SY</div><div style="display: flex; flex-direction: column; gap: 4px; min-width: 0; flex: 1"><div style="padding-right: 36px"><div class="t">The Salt Yard — Smithfield</div></div><div class="s">Smithfield Square, Dublin 7 · Modern Irish</div><div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 22s-7-6-7-12a7 7 0 0 1 14 0c0 6-7 12-7 12Zm0-9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg>1.9 km<span class="dot"></span><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg>4.7 (402)<span class="dot"></span>€€€</div><span class="link-r">2 tables tonight<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></div></a><button class="heart" type="button" aria-label="Save restaurant" aria-pressed="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></button></div>
+        <div class="rw"><a class="rrow" href="WebDetails.dc.html"><div class="logo ring" style="width: 80px; height: 80px">KR</div><div style="display: flex; flex-direction: column; gap: 4px; min-width: 0; flex: 1"><div style="padding-right: 36px"><div class="t">Kōyō Ramen — Capel Street</div></div><div class="s">41 Capel Street, Dublin 1 · Japanese</div><div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 22s-7-6-7-12a7 7 0 0 1 14 0c0 6-7 12-7 12Zm0-9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg>1.4 km<span class="dot"></span><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg>4.8 (1.2k)<span class="dot"></span>€</div><span class="link-r">5 tables tonight<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></div></a><button class="heart" type="button" aria-label="Save restaurant" aria-pressed="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></button></div>
+        <div class="rw"><a class="rrow" href="WebDetails.dc.html"><div class="logo" style="width: 80px; height: 80px; background: #2B4A7A">LP</div><div style="display: flex; flex-direction: column; gap: 4px; min-width: 0; flex: 1"><div style="padding-right: 36px"><div class="t">Lupo Pizza — Ranelagh</div></div><div class="s">8 Ranelagh Village, Dublin 6 · Pizza</div><div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 22s-7-6-7-12a7 7 0 0 1 14 0c0 6-7 12-7 12Zm0-9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg>2.6 km<span class="dot"></span><svg width="14" height="14" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg>4.4 (256)<span class="dot"></span>€€</div><span class="link-r">1 table tonight<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></div></a><button class="heart" type="button" aria-label="Save restaurant" aria-pressed="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></button></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot" style="border-top: 1px solid #EEEEEE; background: #FAFAFA; margin-top: auto">
+    <div class="wrap" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-top: 24px; padding-bottom: 24px">
+      <span style="font-size: 13px; color: #666666">© LastTable · Dublin</span>
+      <div style="display: flex; gap: 20px; flex-wrap: wrap"><a href="#about">About</a><a href="#restaurants">For restaurants</a><a href="#privacy">Privacy</a><a href="#terms">Terms</a></div>
+    </div>
+  </footer>
+</div>
+
+</div><div class="gap"></div><div id="pg5" class="pg" data-name="05 Web Details">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#ffffff}
+a{color:#0E7F84}a:hover{color:#0B7378}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px;box-sizing:border-box}
+.topnav a.nl{color:#1C1C1C;text-decoration:none;font:600 14px 'Plus Jakarta Sans',system-ui,sans-serif;padding:8px 0}
+.topnav a.nl.on{color:#E3111B}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 20px;border-radius:12px;font:700 15px/20px 'Plus Jakarta Sans',system-ui,sans-serif;border:0;cursor:pointer;box-sizing:border-box;text-decoration:none;white-space:nowrap}
+.btn-p{background:#E3111B;color:#fff}
+.btn-s{background:#fff;color:#E3111B;border:1.5px solid #E3111B}
+.ico{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;border:0;background:#fff;color:#1C1C1C;cursor:pointer;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+.ico.teal{color:#0E7F84}
+.search{display:flex;align-items:center;gap:10px;height:44px;padding:0 16px;border-radius:12px;background:#F5F5F5;color:#666666;font:500 14px 'Plus Jakarta Sans',system-ui,sans-serif;box-sizing:border-box;flex:1 1 260px;min-width:0}
+.search input{border:0;background:transparent;font:inherit;color:#1C1C1C;flex:1;min-width:0;outline:none}
+.ph{background:#E9E4DD;color:#7A6F62;display:flex;align-items:center;justify-content:center;text-align:center;font:600 10px/1.3 'Plus Jakarta Sans',system-ui,sans-serif;overflow:hidden}
+.logo{border-radius:50%;display:flex;align-items:center;justify-content:center;font:800 22px 'Plus Jakarta Sans',system-ui,sans-serif;color:#fff;flex:none;letter-spacing:-.02em;width:96px;height:96px;box-shadow:0 0 0 5px #fff}
+.meta{display:flex;align-items:center;gap:6px;font:500 14px/20px 'Plus Jakarta Sans',system-ui,sans-serif;color:#666666;flex-wrap:wrap}
+.meta .dot{width:3px;height:3px;border-radius:50%;background:#C8C8C8}
+.pill{display:inline-flex;align-items:center;height:28px;padding:0 12px;border-radius:999px;font:700 12px 'Plus Jakarta Sans',system-ui,sans-serif}
+.pill.red{background:#FDE8E9;color:#C90E17}.pill.teal{background:#E3F6F4;color:#0B7378}
+.slot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border:1px solid #E6E6E6;border-radius:16px;background:#fff;text-decoration:none;color:#1C1C1C}
+.slot.sel{border:1.5px solid #E3111B;background:#FFF6F6}
+.card{border:1px solid #E6E6E6;border-radius:20px;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:20px;box-sizing:border-box;display:flex;flex-direction:column;gap:12px}
+.h2{margin:0;font-size:20px;font-weight:700;line-height:26px;letter-spacing:-.01em}
+.info{display:flex;gap:12px;align-items:flex-start;font:500 14px/20px 'Plus Jakarta Sans',system-ui,sans-serif;color:#1C1C1C}
+.info svg{flex:none;color:#0E7F84}
+.rev{display:flex;flex-direction:column;gap:6px;padding:14px 0;border-bottom:1px solid #EEEEEE}
+.stars{display:inline-flex;gap:2px;color:#F2B01E}
+.foot a{color:#666666;text-decoration:none;font:500 13px 'Plus Jakarta Sans',system-ui,sans-serif}
+.mosaic{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:12px;aspect-ratio:3/1;border-radius:24px;overflow:hidden}
+.mosaic .ph:first-child{grid-row:span 2}
+@media (max-width:640px){.mosaic{grid-template-columns:1fr;grid-template-rows:auto;aspect-ratio:16/10}.mosaic .ph:first-child{grid-row:auto}.mosaic .ph:nth-child(n+2){display:none}}
+</style>
+
+<div style="display: flex; flex-direction: column; background: #ffffff; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #1C1C1C; min-height: 100vh">
+  <header class="topnav" style="border-bottom: 1px solid #EEEEEE; background: #fff">
+    <div class="wrap" style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; min-height: 72px; padding-top: 12px; padding-bottom: 12px">
+      <a href="WebDiscover.dc.html" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #1C1C1C; flex: none">
+        <span style="width: 32px; height: 32px; border-radius: 10px; background: #E3111B; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px" aria-hidden="true">LT</span>
+        <span style="font-size: 20px; font-weight: 800; letter-spacing: -.02em">LastTable</span>
+      </a>
+      <label class="search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.3-4.3"/></svg><input type="search" placeholder="Restaurant, cuisine or area" aria-label="Search"></label>
+      <nav style="display: flex; gap: 24px; align-items: center; flex-wrap: wrap" aria-label="Main">
+        <a class="nl on" href="WebDiscover.dc.html">Explore</a>
+        <a class="nl" href="#saved">Saved</a>
+        <a class="nl" href="#map">Map</a>
+        <a class="nl" href="#help">Help</a>
+        <a class="btn btn-p" href="#signin" style="height: 40px; font-size: 14px; padding: 0 18px">Sign in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" style="display: flex; flex-direction: column; gap: 28px; padding-top: 24px; padding-bottom: 56px; width: 100%">
+    <nav aria-label="Breadcrumb" style="font-size: 13px; color: #666666; display: flex; gap: 8px; flex-wrap: wrap"><a href="WebDiscover.dc.html" style="color: #666666; text-decoration: none">Explore</a><span>/</span><a href="WebDiscover.dc.html" style="color: #666666; text-decoration: none">Italian</a><span>/</span><span style="color: #1C1C1C; font-weight: 600">Osteria Nove</span></nav>
+
+    <section style="position: relative">
+      <div class="mosaic">
+        <div class="ph" style="font-size: 12px; align-items: flex-end; justify-content: flex-end; padding: 16px">[PHOTO: dining room, 2:1]</div>
+        <div class="ph" style="font-size: 12px">[PHOTO: handmade pasta]</div>
+        <div class="ph" style="font-size: 12px">[PHOTO: wood-fired mains]</div>
+      </div>
+      <div style="position: absolute; left: 20px; top: 20px; display: flex; justify-content: space-between; right: 20px">
+        <a class="ico" href="WebDiscover.dc.html" aria-label="Back"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m7-7-7 7 7 7"/></svg></a>
+        <div style="display: flex; gap: 10px">
+          <a class="ico" href="#share" aria-label="Share"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M12 15V3m-4 4 4-4 4 4"/></svg></a>
+          <a class="ico teal" href="#save" aria-label="Save"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></a>
+        </div>
+      </div>
+      <div class="logo" style="position: absolute; left: 32px; bottom: -28px; background: #1B6B4A">ON</div>
+    </section>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 32px; padding-top: 20px">
+      <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap">
+            <h1 style="margin: 0; font-size: 34px; font-weight: 800; line-height: 40px; letter-spacing: -.02em">Osteria Nove</h1>
+            <div style="display: flex; gap: 8px"><span class="pill red">−30% tonight</span><span class="pill teal">Walk-in friendly</span></div>
+          </div>
+          <div style="font-size: 15px; color: #666666; line-height: 22px">12 Dame Lane, Dublin 2 · Italian · €€</div>
+          <div class="meta"><svg width="16" height="16" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg><span style="color: #1C1C1C; font-weight: 700">4.6</span>(813 reviews)<span class="dot"></span><svg width="16" height="16" viewBox="0 0 24 24" fill="#1C1C1C" aria-hidden="true"><path d="M12 22s-7-6-7-12a7 7 0 0 1 14 0c0 6-7 12-7 12Zm0-9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg>0.8 km from you<span class="dot"></span><span style="color: #0E7F84; font-weight: 600">Open until 11 pm</span></div>
+        </div>
+
+        <p style="margin: 0; font-size: 15px; line-height: 24px; max-width: 640px">Seasonal Italian cooking on a quiet lane off Dame Street. Handmade pasta, wood-fired mains and a short, mostly-Italian wine list. Tables released on LastTable are for the late sitting and carry the discount on food only.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+          <div class="info"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Hours</b><br>Tue–Sun 12:00–23:00<br>Closed Monday</div></div>
+          <div class="info"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg><div><b>Address</b><br>12 Dame Lane, Dublin 2<br><a href="#map">Show on map</a></div></div>
+          <div class="info"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg><div><b>Contact</b><br>[PHONE]<br><a href="#site">osterianove.ie</a></div></div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <div style="display: flex; justify-content: space-between; align-items: center"><h2 class="h2">Reviews</h2><a href="#reviews" style="font-size: 14px; font-weight: 700; color: #E3111B; text-decoration: none">All 813</a></div>
+          <div class="rev"><div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap"><span style="font-weight: 700; font-size: 14px">Aoife M.</span><span class="stars" aria-label="5 out of 5"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg></span></div><p style="margin: 0; font-size: 14px; line-height: 20px; color: #1C1C1C">Late table at 9:30, no rush, pappardelle was the best I've had in Dublin.</p><span style="font-size: 12px; color: #666666">Booked through LastTable · 2 weeks ago</span></div>
+          <div class="rev" style="border-bottom: 0"><div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap"><span style="font-weight: 700; font-size: 14px">Daniel K.</span><span class="stars" aria-label="4 out of 5"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#E6E6E6" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8Z"/></svg></span></div><p style="margin: 0; font-size: 14px; line-height: 20px; color: #1C1C1C">Great value with the discount. Room gets loud after ten.</p><span style="font-size: 12px; color: #666666">Booked through LastTable · 1 month ago</span></div>
+        </div>
+      </div>
+
+      <aside style="flex: 1 1 320px; max-width: 400px; min-width: 0">
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center"><h2 class="h2" style="font-size: 18px">Tables tonight</h2><span style="font-size: 13px; color: #666666">Party of 2</span></div>
+          <a class="slot sel" href="#t1"><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 16px; font-weight: 700">9:15 pm</span><span style="font-size: 13px; color: #666666">30% off food</span></div><span style="font-size: 12px; font-weight: 600; letter-spacing: .02em">SAVE <span style="color: #E3111B">€24</span></span></a>
+          <a class="slot" href="#t2"><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 16px; font-weight: 700">9:45 pm</span><span style="font-size: 13px; color: #666666">30% off food</span></div><span style="font-size: 12px; font-weight: 600; letter-spacing: .02em">SAVE <span style="color: #E3111B">€24</span></span></a>
+          <a class="slot" href="#t3"><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 16px; font-weight: 700">10:15 pm</span><span style="font-size: 13px; color: #666666">40% off food</span></div><span style="font-size: 12px; font-weight: 600; letter-spacing: .02em">SAVE <span style="color: #E3111B">€32</span></span></a>
+          <a class="btn btn-p" href="#book" style="margin-top: 4px">Book 9:15 pm</a>
+          <a class="btn btn-s" href="#menu">View menu</a>
+          <p style="margin: 0; font-size: 12px; color: #666666; line-height: 18px; text-align: center">Discount applies to food. Free cancellation until 1 hour before.</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="foot" style="border-top: 1px solid #EEEEEE; background: #FAFAFA; margin-top: auto">
+    <div class="wrap" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-top: 24px; padding-bottom: 24px">
+      <span style="font-size: 13px; color: #666666">© LastTable · Dublin</span>
+      <div style="display: flex; gap: 20px; flex-wrap: wrap"><a href="#about">About</a><a href="#restaurants">For restaurants</a><a href="#privacy">Privacy</a><a href="#terms">Terms</a></div>
+    </div>
+  </footer>
+</div>
+
+</div>
+</body></html>

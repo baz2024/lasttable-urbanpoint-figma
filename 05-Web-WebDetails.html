@@ -37,6 +37,9 @@ a{color:#0E7F84}a:hover{color:#0B7378}
 .rev{display:flex;flex-direction:column;gap:6px;padding:14px 0;border-bottom:1px solid #EEEEEE}
 .stars{display:inline-flex;gap:2px;color:#F2B01E}
 .foot a{color:#666666;text-decoration:none;font:500 13px 'Plus Jakarta Sans',system-ui,sans-serif}
+.mosaic{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:12px;aspect-ratio:3/1;border-radius:24px;overflow:hidden}
+.mosaic .ph:first-child{grid-row:span 2}
+@media (max-width:640px){.mosaic{grid-template-columns:1fr;grid-template-rows:auto;aspect-ratio:16/10}.mosaic .ph:first-child{grid-row:auto}.mosaic .ph:nth-child(n+2){display:none}}
 </style>
 
 <div style="display: flex; flex-direction: column; background: #ffffff; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #1C1C1C; min-height: 100vh">
@@ -61,8 +64,8 @@ a{color:#0E7F84}a:hover{color:#0B7378}
     <nav aria-label="Breadcrumb" style="font-size: 13px; color: #666666; display: flex; gap: 8px; flex-wrap: wrap"><a href="WebDiscover.dc.html" style="color: #666666; text-decoration: none">Explore</a><span>/</span><a href="WebDiscover.dc.html" style="color: #666666; text-decoration: none">Italian</a><span>/</span><span style="color: #1C1C1C; font-weight: 600">Osteria Nove</span></nav>
 
     <section style="position: relative">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; height: 380px; border-radius: 24px; overflow: hidden">
-        <div class="ph" style="font-size: 12px; grid-row: span 2">[PHOTO: dining room, 2:3]</div>
+      <div class="mosaic">
+        <div class="ph" style="font-size: 12px; align-items: flex-end; justify-content: flex-end; padding: 16px">[PHOTO: dining room, 2:1]</div>
         <div class="ph" style="font-size: 12px">[PHOTO: handmade pasta]</div>
         <div class="ph" style="font-size: 12px">[PHOTO: wood-fired mains]</div>
       </div>

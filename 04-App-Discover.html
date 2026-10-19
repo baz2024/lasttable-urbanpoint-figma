@@ -20,8 +20,12 @@ a{color:#0E7F84}a:hover{color:#0B7378}
 .tile.s3 .obj{width:64px;height:64px;right:4px;bottom:4px}
 .ph{background:#E9E4DD;color:#7A6F62;display:flex;align-items:center;justify-content:center;text-align:center;font:600 10px/1.3 'Plus Jakarta Sans',system-ui,sans-serif;overflow:hidden}
 .logo{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:800 16px 'Plus Jakarta Sans',system-ui,sans-serif;color:#fff;flex:none;letter-spacing:-.02em}
-.ocard{position:relative;overflow:hidden;display:flex;gap:14px;padding:16px;border-radius:20px;border:1px solid #E6E6E6;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.06);font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1C1C1C;text-decoration:none;box-sizing:border-box;flex:none;width:318px}
-.ocard .notch{position:absolute;right:-11px;width:22px;height:22px;border-radius:50%;background:#fff;border:1px solid #E6E6E6}
+.ow{position:relative;flex:none;width:318px}
+.ocard{position:relative;overflow:hidden;display:flex;gap:14px;padding:16px;border-radius:20px;border:1px solid #E6E6E6;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.06);font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1C1C1C;text-decoration:none;box-sizing:border-box;width:100%}
+.ocard .notch{position:absolute;right:-9px;width:18px;height:18px;border-radius:50%;background:#fff;border:1px solid #E6E6E6}
+.ob{position:absolute;right:8px;width:44px;height:44px;border:0;background:transparent;padding:0;display:inline-flex;align-items:center;justify-content:center;color:#0E7F84;cursor:pointer}
+.util{white-space:nowrap}
+.tile.s3 .obj{right:0;bottom:0}
 .sect{display:flex;justify-content:space-between;align-items:center}
 .sect h2{margin:0;font-size:18px;font-weight:700;line-height:24px;color:#1C1C1C}
 .sect a{display:inline-flex;align-items:center;gap:8px;color:#E3111B;font:700 14px 'Plus Jakarta Sans',system-ui,sans-serif;text-decoration:none}
@@ -34,8 +38,8 @@ a{color:#0E7F84}a:hover{color:#0B7378}
 <div style="width: 390px; height: 844px; box-sizing: border-box; display: flex; flex-direction: column; background: #ffffff; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #1C1C1C; overflow: hidden">
   <div style="flex: 1; min-height: 0; overflow: hidden; display: flex; flex-direction: column; gap: 24px; padding: 60px 20px 0">
     <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
-      <h1 style="margin: 0; font-size: 26px; font-weight: 700; line-height: 32px; letter-spacing: -.01em">Good evening, Basel</h1>
-      <div style="display: flex; gap: 10px">
+      <h1 style="margin: 0; font-size: 26px; font-weight: 700; line-height: 32px; letter-spacing: -.01em; white-space: nowrap">Good evening!</h1>
+      <div style="display: flex; gap: 8px">
         <a class="util" href="#location"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>Dublin 2</a>
         <a class="util" href="#help"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/><path d="M10 9.5a2 2 0 1 1 2.8 1.8c-.5.3-.8.7-.8 1.2M12 14.5h.01"/></svg>Help</a>
       </div>
@@ -53,9 +57,9 @@ a{color:#0E7F84}a:hover{color:#0B7378}
       </div>
     </div>
 
-    <a href="Listing.dc.html" style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; height: 180px; border-radius: 24px; overflow: hidden; text-decoration: none; color: #fff; text-align: center; flex: none">
-      <div class="ph" style="position: absolute; inset: 0; font-size: 11px; color: #5C5248">[PHOTO: restaurant terrace at dusk, full bleed]</div>
-      <div style="position: absolute; inset: 0; background: rgba(20,20,20,.42)"></div>
+    <a href="Listing.dc.html" style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; height: 152px; border-radius: 24px; overflow: hidden; text-decoration: none; color: #fff; text-align: center; flex: none">
+      <div class="ph" style="position: absolute; inset: 0; align-items: flex-start; justify-content: flex-start; padding: 10px; font-size: 11px; color: #5C5248">[PHOTO: restaurant terrace at dusk, full bleed]</div>
+      <div style="position: absolute; inset: 0; background: rgba(20,20,20,.55)"></div>
       <div style="position: relative; font-size: 24px; font-weight: 800; line-height: 28px; letter-spacing: -.01em">Late tables,<br>lower prices</div>
       <div style="position: relative; font-size: 13px; font-weight: 600; opacity: .95">Up to 50% off food after 9 pm</div>
       <span style="position: relative; display: inline-flex; align-items: center; height: 32px; padding: 0 14px; margin-top: 6px; border-radius: 999px; background: #fff; color: #E3111B; font-size: 13px; font-weight: 700">View all offers</span>
@@ -64,19 +68,22 @@ a{color:#0E7F84}a:hover{color:#0B7378}
     <div style="display: flex; flex-direction: column; gap: 12px">
       <div class="sect"><h2>Tonight's tables</h2><a href="Listing.dc.html">View all<span class="ico red sm"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></span></a></div>
       <div style="display: flex; gap: 12px; margin: 0 -20px; padding: 0 20px 4px; overflow: hidden">
+        <div class="ow">
         <a class="ocard" href="Details.dc.html">
-          <div class="notch" style="top: 30px"></div><div class="notch" style="bottom: 30px"></div>
+          <div class="notch" style="top: calc(50% - 22px)"></div><div class="notch" style="bottom: calc(50% - 22px)"></div>
           <div class="logo" style="background: #1B6B4A">ON</div>
           <div style="display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; padding-right: 36px">
             <div style="font-size: 13px; color: #666666; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Osteria Nove — Dame Lane</div>
             <div style="font-size: 16px; font-weight: 700; line-height: 22px">30% off food for 2, 9:15 pm</div>
             <div style="font-size: 12px; font-weight: 600; letter-spacing: .02em; padding-top: 4px">SAVE <span style="color: #E3111B">€24</span></div>
           </div>
-          <span class="ico teal" style="position: absolute; right: 12px; top: 12px; width: 32px; height: 32px; background: transparent"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></span>
-          <span class="ico teal" style="position: absolute; right: 12px; bottom: 12px; width: 32px; height: 32px; background: transparent"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3m8-3v3M3 9h18M5 5h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg></span>
         </a>
+        <button class="ob" type="button" style="top: 6px" aria-label="Save offer" aria-pressed="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></button>
+        <button class="ob" type="button" style="bottom: 6px" aria-label="Add to calendar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3m8-3v3M3 9h18M5 5h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg></button>
+        </div>
+        <div class="ow">
         <a class="ocard" href="Details.dc.html">
-          <div class="notch" style="top: 30px"></div><div class="notch" style="bottom: 30px"></div>
+          <div class="notch" style="top: calc(50% - 22px)"></div><div class="notch" style="bottom: calc(50% - 22px)"></div>
           <div class="logo" style="background: #B8382B">SY</div>
           <div style="display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; padding-right: 36px">
             <div style="font-size: 13px; color: #666666; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">The Salt Yard — Smithfield</div>
@@ -84,6 +91,9 @@ a{color:#0E7F84}a:hover{color:#0B7378}
             <div style="font-size: 12px; font-weight: 600; letter-spacing: .02em; padding-top: 4px">SAVE <span style="color: #E3111B">€36</span></div>
           </div>
         </a>
+        <button class="ob" type="button" style="top: 6px" aria-label="Save offer" aria-pressed="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8.2a4.2 4.2 0 0 1 7.5 2.3c0 5.4-7.5 10-7.5 10Z"/></svg></button>
+        <button class="ob" type="button" style="bottom: 6px" aria-label="Add to calendar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3m8-3v3M3 9h18M5 5h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg></button>
+        </div>
       </div>
     </div>
   </div>
