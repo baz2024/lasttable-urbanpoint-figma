@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LastTable Business — Create Flash Table</title>
+</head>
+<body>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F5F5F5}
+*{box-sizing:border-box}
+.f{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1C1C1C}
+.rail{width:248px;flex:none;background:#0F1B2D;color:#fff;display:flex;flex-direction:column;padding:20px 16px;gap:8px;min-height:100%}
+.rail .brand{display:flex;align-items:center;gap:10px;padding:4px 8px 16px}
+.rail .venue{display:flex;align-items:center;gap:12px;padding:12px;border-radius:16px;background:rgba(255,255,255,.08);margin-bottom:8px}
+.rail .venue .av{width:40px;height:40px;border-radius:50%;background:#139095;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;flex:none}
+.nav a{display:flex;align-items:center;gap:12px;height:46px;padding:0 14px;border-radius:12px;color:rgba(255,255,255,.82);text-decoration:none;font-weight:600;font-size:15px}
+.nav a.on{background:#fff;color:#0F1B2D;font-weight:700}
+.nav a .n{margin-left:auto;background:#800020;color:#fff;font-size:11px;font-weight:700;border-radius:999px;padding:2px 8px}
+.nav a.on .n{background:#800020}
+.rail .foot a{display:flex;align-items:center;gap:10px;height:40px;padding:0 14px;color:rgba(255,255,255,.72);text-decoration:none;font-weight:600;font-size:14px}
+.main{flex:1;min-width:0;padding:28px 32px 40px;display:flex;flex-direction:column;gap:20px}
+.hd{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.hd h1{margin:0;font-size:28px;line-height:34px;font-weight:800;letter-spacing:-.02em}
+.hd .sub{font-size:14px;color:#666;font-weight:500;margin-top:4px;display:flex;align-items:center;gap:6px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 18px;border-radius:12px;font:700 14px/20px 'Plus Jakarta Sans',system-ui,sans-serif;border:0;cursor:pointer;text-decoration:none;white-space:nowrap;color:#1C1C1C;background:#fff}
+.btn-p{background:#0E7F84;color:#fff}
+.btn-flash{background:#800020;color:#fff}
+.btn-s{background:#fff;color:#1C1C1C;border:1.5px solid #E6E6E6}
+.btn-g{background:#F5F5F5;color:#1C1C1C}
+.btn-t{background:transparent;color:#0E7F84}
+.btn.sm{height:36px;padding:0 14px;font-size:13px;border-radius:10px}
+.card{background:#fff;border-radius:20px;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:20px}
+.card h2{margin:0;font-size:18px;line-height:24px;font-weight:700;letter-spacing:-.01em}
+.card .cap{font-size:13px;color:#666;font-weight:500;margin-top:2px}
+.kpi{display:flex;flex-direction:column;gap:10px}
+.kpi .lb{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#666}
+.kpi .lb .ic{width:32px;height:32px;border-radius:10px;background:#E3F6F4;color:#0E7F84;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.kpi .v{font-size:32px;line-height:36px;font-weight:800;letter-spacing:-.02em}
+.kpi .v small{font-size:14px;font-weight:600;color:#666;letter-spacing:0;margin-left:4px}
+.kpi .d{font-size:13px;font-weight:600;color:#666}
+.kpi .d.up{color:#1F8A5B}.kpi .d.flash{color:#800020}
+.pill{display:inline-flex;align-items:center;gap:5px;height:24px;padding:0 10px;border-radius:999px;font-size:12px;font-weight:700;white-space:nowrap}
+.p-new{background:#FBF0DC;color:#8A5A12}
+.p-flash{background:#F5E6EA;color:#800020}
+.p-lt{background:#E3F6F4;color:#0B7378}
+.p-free{background:#E3F3EA;color:#1F8A5B}
+.p-seated{background:#0F1B2D;color:#fff}
+.p-booked{background:#fff;color:#0F1B2D;border:1.5px solid #0F1B2D}
+.p-held{background:#FBF0DC;color:#8A5A12}
+.p-grey{background:#F5F5F5;color:#666}
+.p-wait{background:#F5E6EA;color:#800020}
+.chip{display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 16px;border-radius:999px;background:#fff;color:#1C1C1C;font:600 14px 'Plus Jakarta Sans',system-ui,sans-serif;border:1px solid #E6E6E6;cursor:pointer;white-space:nowrap}
+.chip.sel{background:#0E7F84;color:#fff;border-color:#0E7F84}
+.chip.g{background:#F5F5F5;border-color:transparent}
+.row{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid #EEEEEE;align-items:flex-start}
+.row:last-child{border-bottom:0}
+.row .t{font-size:16px;font-weight:700;line-height:22px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.row .s{font-size:13px;color:#666;line-height:18px;font-weight:500;margin-top:2px}
+.row .tm{font-size:15px;font-weight:800;width:52px;flex:none;line-height:22px;letter-spacing:-.01em}
+.act{display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 12px;border-radius:10px;font:700 13px 'Plus Jakarta Sans',system-ui,sans-serif;color:#0E7F84;background:#F5F5F5;border:0;cursor:pointer;white-space:nowrap}
+.act.pri{background:#0E7F84;color:#fff}
+.act.quiet{background:transparent;color:#666}
+.tb{border-radius:14px;border:1.5px solid #E6E6E6;background:#fff;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tb .id{font-size:15px;font-weight:800}
+.tb .m{font-size:12px;color:#666;font-weight:600;display:flex;align-items:center;gap:4px}
+.tb.free{border-color:#B9E2CB;background:#F3FBF6}
+.tb.seated{background:#0F1B2D;color:#fff;border-color:#0F1B2D}.tb.seated .m{color:rgba(255,255,255,.75)}
+.tb.booked{border-color:#0F1B2D}
+.tb.held{border-color:#E8C98A;background:#FFF8EA}
+.ico{display:inline-flex;align-items:center;justify-content:center;flex:none}
+.note{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:12px;background:#F5F5F5;font-size:13px;font-weight:500;color:#1C1C1C;line-height:18px}
+.note.teal{background:#E3F6F4;color:#0B7378}
+.note.amber{background:#FBF0DC;color:#8A5A12}
+.toggle{width:44px;height:26px;border-radius:999px;background:#0E7F84;position:relative;flex:none}
+.toggle:after{content:'';position:absolute;top:3px;right:3px;width:20px;height:20px;border-radius:50%;background:#fff}
+.bar{height:8px;border-radius:999px;background:#EEEEEE;overflow:hidden}.bar i{display:block;height:100%;background:#0E7F84;border-radius:999px}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 20px 10px;background:#fff}
+.bnav{position:absolute;left:0;right:0;bottom:0;height:84px;background:#fff;border-top:1px solid #EEEEEE;display:flex;justify-content:space-around;padding:8px 8px 22px}
+.bnav a{display:flex;flex-direction:column;align-items:center;gap:4px;font:600 11px 'Plus Jakarta Sans',system-ui,sans-serif;color:#666;text-decoration:none;width:64px}
+.bnav a.on{color:#0E7F84;font-weight:700}
+.sb{height:54px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 24px 8px;font:700 15px 'Plus Jakarta Sans',system-ui,sans-serif}
+.fab{text-decoration:none;position:absolute;right:16px;bottom:100px;height:52px;padding:0 20px;border-radius:999px;background:#800020;color:#fff;display:inline-flex;align-items:center;gap:8px;font:700 15px 'Plus Jakarta Sans',system-ui,sans-serif;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+.seg{display:inline-flex;background:#fff;border:1px solid #E6E6E6;border-radius:12px;padding:3px}
+.seg span{display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 14px;border-radius:9px;font-weight:700;font-size:13px;color:#666}
+.seg span.on{background:#0F1B2D;color:#fff}
+.day{display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 0;border-radius:14px;background:#fff;border:1px solid #E6E6E6;flex:1;font-weight:600;font-size:12px;color:#666}
+.day b{font-size:20px;color:#1C1C1C;font-weight:800;line-height:24px}
+.day.on{background:#0F1B2D;border-color:#0F1B2D;color:rgba(255,255,255,.75)}.day.on b{color:#fff}
+.slot{display:inline-flex;align-items:center;justify-content:center;height:44px;min-width:76px;padding:0 14px;border-radius:12px;border:1.5px solid #E6E6E6;background:#fff;font-weight:700;font-size:14px}
+.slot.sel{background:#0E7F84;border-color:#0E7F84;color:#fff}
+.step{display:flex;align-items:center;gap:14px;padding:16px 20px;border-radius:16px;background:#fff;border:1.5px solid #E6E6E6}
+.step .num{width:32px;height:32px;border-radius:50%;background:#F5F5F5;color:#666;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;flex:none}
+.step.on{border-color:#0E7F84}.step.on .num{background:#0E7F84;color:#fff}
+.step.done .num{background:#E3F3EA;color:#1F8A5B}
+input,.inp{height:48px;border-radius:12px;border:1.5px solid #E6E6E6;background:#fff;padding:0 14px;font:600 15px 'Plus Jakarta Sans',system-ui,sans-serif;color:#1C1C1C;width:100%;outline:none}
+.inp.ph{color:#9A9A9A;display:flex;align-items:center}
+</style>
+
+<div class="f" style="display:flex;flex-direction:column;min-height:100vh;background:#F5F5F5">
+<header style="display:flex;align-items:center;justify-content:space-between;padding:16px 32px;background:#fff;border-bottom:1px solid #EEEEEE">
+  <div style="display:flex;align-items:center;gap:14px"><button class="btn btn-g" style="width:44px;padding:0"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button><div><div style="font-size:20px;font-weight:800;letter-spacing:-.02em;display:flex;align-items:center;gap:8px"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#800020" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>Create Flash Table</div><div style="font-size:13px;color:#666;font-weight:500">Harbour & Hook · tonight, Mon 19 Oct · ends automatically at the last slot</div></div></div>
+  <div style="display:flex;align-items:center;gap:10px"><span style="font-size:13px;color:#666;font-weight:500;display:inline-flex;gap:6px;align-items:center"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E7F84" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>Goes live only when you publish. End it any time.</span><button class="btn btn-s">Save draft</button><button class="btn btn-flash"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>Publish Flash Table</button></div>
+</header>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:24px;padding:28px 32px;align-items:start">
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <div class="step done"><span class="num"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7"/></svg></span><div style="flex:1"><div style="font-size:12px;font-weight:600;color:#666">Step 1</div><div style="font-size:16px;font-weight:700">Times · 22:00 and 22:30</div></div><a class="btn btn-t sm" href="#edit">Edit</a></div>
+    <div class="card step on" style="flex-direction:column;align-items:stretch;gap:18px;padding:24px;border-width:2px">
+      <div style="display:flex;align-items:center;gap:14px"><span class="num">2</span><div style="flex:1"><div style="font-size:12px;font-weight:600;color:#666">Step 2</div><div style="font-size:18px;font-weight:800;letter-spacing:-.01em">Offer</div></div></div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+        <div class="tb" style="align-items:center;text-align:center;padding:16px 10px"><span class="id" style="font-size:20px">−15 %</span><span class="m" style="justify-content:center">off food</span></div><div class="tb booked" style="align-items:center;text-align:center;padding:16px 10px;border-color:#800020;background:#F5E6EA"><span class="id" style="font-size:20px;color:#800020">−20 %</span><span class="m" style="justify-content:center">off food</span></div><div class="tb" style="align-items:center;text-align:center;padding:16px 10px"><span class="id" style="font-size:20px">−30 %</span><span class="m" style="justify-content:center">off food</span></div><div class="tb" style="align-items:center;text-align:center;padding:16px 10px"><span class="id" style="font-size:20px">2 for 1</span><span class="m" style="justify-content:center">on food</span></div>
+      </div>
+      <div class="note"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><span>Ireland: food only — drinks and set menus are excluded by the conditions of 19 Oct 2026. A diner who books with <b>2 for 1</b> costs 10 credits instead of 15 when seated.</span></div>
+      <div style="display:flex;justify-content:flex-end"><button class="btn btn-p">Continue</button></div>
+    </div>
+    <div class="step"><span class="num">3</span><div style="flex:1"><div style="font-size:12px;font-weight:600;color:#666">Step 3</div><div style="font-size:16px;font-weight:700">Table limit · <span style="color:#666;font-weight:600">4 of 4 free tables</span></div></div></div>
+    <div class="step"><span class="num">4</span><div style="flex:1"><div style="font-size:12px;font-weight:600;color:#666">Step 4</div><div style="font-size:16px;font-weight:700">Who sees it · <span style="color:#666;font-weight:600">Everyone nearby</span></div></div></div>
+    <div class="card" style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;align-items:center"><h2>What this could bring</h2><span class="pill p-grey">Estimate</span></div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+        <div style="background:#F5F5F5;border-radius:14px;padding:14px"><div style="font-size:26px;font-weight:800;letter-spacing:-.02em">6–10</div><div style="font-size:13px;color:#666;font-weight:600">extra diners</div></div>
+        <div style="background:#F5F5F5;border-radius:14px;padding:14px"><div style="font-size:26px;font-weight:800;letter-spacing:-.02em">≈ €290</div><div style="font-size:13px;color:#666;font-weight:600">food revenue after discount</div></div>
+        <div style="background:#E3F6F4;border-radius:14px;padding:14px"><div style="font-size:26px;font-weight:800;letter-spacing:-.02em;color:#0B7378">≤ 60 cr</div><div style="font-size:13px;color:#0B7378;font-weight:600">≈ €6 if all 4 tables are new diners</div></div>
+      </div>
+      <div style="font-size:12px;color:#666;font-weight:500">Assumes 2.6 guests a table and your average food spend of €38 a guest. Not a guarantee.</div>
+    </div>
+  </div>
+  <aside style="display:flex;flex-direction:column;gap:12px;position:sticky;top:28px">
+    <div style="text-align:center"><div style="font-size:16px;font-weight:800">Live preview</div><div style="font-size:13px;color:#666;font-weight:500">How diners see it in the LastTable app</div></div>
+    <div style="width:320px;margin:0 auto;border-radius:36px;background:#0F1B2D;padding:10px;box-shadow:0 6px 20px rgba(0,0,0,.12)">
+      <div style="border-radius:28px;background:#fff;overflow:hidden;padding:18px 16px 20px;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:700"><span>21:12</span><span style="width:70px;height:18px;border-radius:999px;background:#0F1B2D"></span></div>
+        <div style="font-size:17px;font-weight:800;letter-spacing:-.01em;display:flex;align-items:center;gap:6px"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#800020" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>Tonight's Flash Tables</div>
+        <div style="position:relative;border-radius:20px;border:1px solid #E6E6E6;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:14px;display:flex;gap:12px;overflow:hidden">
+          <span style="position:absolute;right:-9px;top:50%;margin-top:-9px;width:18px;height:18px;border-radius:50%;background:#fff;border:1px solid #E6E6E6"></span>
+          <span style="width:56px;height:56px;border-radius:50%;background:#0F1B2D;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:800;flex:none">HH</span>
+          <div style="min-width:0;flex:1"><div style="font-size:12px;color:#666;font-weight:600">Harbour & Hook — Dublin 2</div><div style="font-size:15px;font-weight:800;line-height:20px;letter-spacing:-.01em">20 % off food tonight</div><div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap"><span class="pill" style="background:#800020;color:#fff">22:00</span><span class="pill" style="background:#800020;color:#fff">22:30</span><span class="pill p-grey">4 tables left</span></div></div>
+        </div>
+        <div style="font-size:12px;font-weight:700;color:#666">In search results</div>
+        <div style="display:flex;gap:12px;align-items:center"><span style="width:64px;height:64px;border-radius:16px;background:#E9E4DD;flex:none;display:flex;align-items:center;justify-content:center;font-size:9px;color:#7A6F62;text-align:center;font-weight:600">[venue photo]</span><div style="min-width:0;flex:1"><div style="font-size:15px;font-weight:800">Harbour & Hook</div><div style="font-size:12px;color:#666;font-weight:500">Seafood · Dublin 2 · <svg class="ico" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#F2B01E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.8 5.8 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.3l1-6.2L3 9.7l6.2-.9L12 3Z"/></svg> 4.6</div><div style="display:flex;gap:6px;margin-top:6px"><span class="pill p-flash"><svg class="ico" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg> −20 % food</span><span class="pill p-grey">22:00 · 22:30</span></div></div></div>
+      </div>
+    </div>
+    <div class="note teal"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg><span>Diners see the discount, the slots and the tables left. They never see your forecast or occupancy.</span></div>
+  </aside>
+</div>
+</div>
+
+</body>
+</html>
